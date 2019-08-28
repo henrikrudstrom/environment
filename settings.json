@@ -1398,7 +1398,7 @@
     "statusBar.noFolderBackground": "#B48EAD",
     "statusBar.debuggingBackground": "#B48EAD"
   },
-  "workbench.iconTheme": "Monokai Pro Icons",
+  "workbench.iconTheme": "Monokai Classic Icons",
   "peacock.favoriteColors": [
     {
       "name": "Angular Red",
@@ -1457,7 +1457,7 @@
   "editor.fontFamily": "Fira Code",
   "editor.fontLigatures": true,
   "editor.fontSize": 13,
-  "workbench.colorTheme": "Monokai Pro",
+  "workbench.colorTheme": "Monokai Classic",
   "vim.camelCaseMotion.enable": true,
   "editor.minimap.enabled": false,
   "todo-tree.showInExplorer": false,
