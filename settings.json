@@ -37,6 +37,8 @@
     "typescriptreact"
   ],
   "prettier.eslintIntegration": true,
+  "terminal.integrated.fontFamily": "Source Code Pro for Powerline",
+  "terminal.integrated.shell.osx": "/bin/zsh",
   "vim.surround": true,
   "vim.leader": "<space>",
   "vim.sneak": true,
@@ -95,6 +97,31 @@
     }
   ],
   "vim.normalModeKeyBindings": [
+    {
+      "before": [
+        "H"
+      ],
+      "after": [],
+      "commands": [
+        {
+          "command": "metaGo.goto",
+          "args": [],
+        }
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "H"
+      ],
+      "after": [],
+      "commands": [
+        {
+          "command": "metaGo.selection",
+          "args": [],
+        }
+      ]
+    },
     {
       "before": [
         "<leader>",
@@ -1428,7 +1455,6 @@
   ],
   "peacock.surpriseMeOnStartup": true,
   "editor.fontFamily": "Fira Code",
-  "terminal.integrated.fontFamily": "monospace",
   "editor.fontLigatures": true,
   "editor.fontSize": 13,
   "workbench.colorTheme": "Monokai Pro",
@@ -1436,5 +1462,9 @@
   "editor.minimap.enabled": false,
   "todo-tree.showInExplorer": false,
   "java.dependency.showOutline": false,
-  "todo-tree.hideTreeWhenEmpty": false
+  "todo-tree.hideTreeWhenEmpty": false,
+  "metaGo.bookmark.saveBookmarksInProject": true,
+  "metaGo.decoration.fontFamily": "Fira Code",
+  "metaGo.decoration.width": 10,
+  "metaGo.decoration.y": 13
 }

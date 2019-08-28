@@ -16,15 +16,15 @@
 	// 	"description": "Log output to console"
 	// }
 	"vimcmd": {
-		"prefix": "key",
+		"prefix": "vimkey",
 		"body": [
 			"{",
-			"\"before\":[\"$1\"],",
-			"\"after\": [],",
-			"\"commands\": {",
-			"\"command\": \"$1\",",
-			"\"args\": [],",
-			"}",
+			"    \"before\":[\"$1\"],",
+			"    \"after\": [],",
+			"    \"commands\": [{",
+			"        \"command\": \"$2\",",
+			"        \"args\": [],",
+			"    }]",
 			"}"
 		]
 	}
