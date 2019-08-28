@@ -1,0 +1,9 @@
+set status-show-untracked-files = yes
+bind main ! !?git revert %(commit)
+bind main   w !?git push origin
+bind main   B !git rebase -i %(commit)
+
+bind status a !?git commit --amend
+bind status P !?git push --force-with-lease
+bind status w !?git push origin
+
