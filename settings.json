@@ -36,7 +36,6 @@
     "typescript",
     "typescriptreact"
   ],
-  "prettier.eslintIntegration": true,
   "terminal.integrated.fontFamily": "Source Code Pro for Powerline",
   "terminal.integrated.shell.osx": "/bin/zsh",
   "vim.surround": true,
@@ -1466,5 +1465,6 @@
   "metaGo.bookmark.saveBookmarksInProject": true,
   "metaGo.decoration.fontFamily": "Fira Code",
   "metaGo.decoration.width": 10,
-  "metaGo.decoration.y": 13
+  "metaGo.decoration.y": 13,
+  "eslint.autoFixOnSave": true
 }
