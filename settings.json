@@ -1093,118 +1093,6 @@
         }
       ]
     },
-    // {
-    //   "before": [
-    //     "<leader>",
-    //     "w",
-    //     "-"
-    //   ],
-    //   "after": [],
-    //   "commands": [
-    //     {
-    //       "command": "workbench.action.splitEditorDown",
-    //       "args": []
-    //     }
-    //   ]
-    // },
-    // {
-    //   "before": [
-    //     "<leader>",
-    //     "w",
-    //     "/"
-    //   ],
-    //   "after": [],
-    //   "commands": [
-    //     {
-    //       "command": "workbench.action.splitEditorRight",
-    //       "args": []
-    //     }
-    //   ]
-    // },
-    // {
-    //   "before": [
-    //     "<leader>",
-    //     "w",
-    //     "d"
-    //   ],
-    //   "after": [],
-    //   "commands": [
-    //     {
-    //       "command": "workbench.action.closeEditorsInGroup",
-    //       "args": []
-    //     }
-    //   ]
-    // },
-    // {
-    //   "before": [
-    //     "<leader>",
-    //     "w",
-    //     "h"
-    //   ],
-    //   "after": [],
-    //   "commands": [
-    //     {
-    //       "command": "workbench.action.focusPreviousGroup",
-    //       "args": []
-    //     }
-    //   ]
-    // },
-    // {
-    //   "before": [
-    //     "<leader>",
-    //     "w",
-    //     "H"
-    //   ],
-    //   "after": [],
-    //   "commands": [
-    //     {
-    //       "command": "workbench.action.moveActiveEditorGroupLeft",
-    //       "args": []
-    //     }
-    //   ]
-    // },
-    // {
-    //   "before": [
-    //     "<leader>",
-    //     "w",
-    //     "j"
-    //   ],
-    //   "after": [],
-    //   "commands": [
-    //     {
-    //       "command": "workbench.action.focusBelowGroup",
-    //       "args": []
-    //     }
-    //   ]
-    // },
-    // {
-    //   "before": [
-    //     "<leader>",
-    //     "w",
-    //     "k"
-    //   ],
-    //   "after": [],
-    //   "commands": [
-    //     {
-    //       "command": "workbench.action.focusAboveGroup",
-    //       "args": []
-    //     }
-    //   ]
-    // },
-    // {
-    //   "before": [
-    //     "<leader>",
-    //     "w",
-    //     "l"
-    //   ],
-    //   "after": [],
-    //   "commands": [
-    //     {
-    //       "command": "workbench.action.focusNextGroup",
-    //       "args": []
-    //     }
-    //   ]
-    // },
     {
       "before": [
         "g",
@@ -1246,116 +1134,7 @@
         }
       ]
     },
-    // {
-    //   "before": [
-    //     "<leader>",
-    //     "w",
-    //     "v"
-    //   ],
-    //   "after": [],
-    //   "commands": [
-    //     {
-    //       "command": "workbench.action.splitEditor",
-    //       "args": []
-    //     }
-    //   ]
-    // },
-    // {
-    //   "before": [
-    //     "<leader>",
-    //     "w",
-    //     "w"
-    //   ],
-    //   "after": [],
-    //   "commands": [
-    //     {
-    //       "command": "workbench.action.focusNextGroup",
-    //       "args": []
-    //     }
-    //   ]
-    // },
-    // {
-    //   "before": [
-    //     "<leader>",
-    //     "w",
-    //     "W"
-    //   ],
-    //   "after": [],
-    //   "commands": [
-    //     {
-    //       "command": "workbench.action.focusPreviousGroup",
-    //       "args": []
-    //     }
-    //   ]
-    // },
-    // {
-    //   "before": [
-    //     "<leader>",
-    //     "x",
-    //     "s"
-    //   ],
-    //   "after": [],
-    //   "commands": [
-    //     {
-    //       "command": "editor.action.sortLinesAscending",
-    //       "args": []
-    //     }
-    //   ]
-    // },
-    // {
-    //   "before": [
-    //     "<leader>",
-    //     "x",
-    //     "w"
-    //   ],
-    //   "after": [],
-    //   "commands": [
-    //     {
-    //       "command": "editor.action.trimTrailingWhitespace",
-    //       "args": []
-    //     }
-    //   ]
-    // },
-    // {
-    //   "before": [
-    //     "<leader>",
-    //     "t",
-    //     "h"
-    //   ],
-    //   "after": [],
-    //   "commands": [
-    //     {
-    //       "command": "workbench.action.previousEditor",
-    //       "args": []
-    //     }
-    //   ]
-    // },
-    // {
-    //   "before": [
-    //     "<leader>",
-    //     "t",
-    //     "j"
-    //   ],
-    //   "after": [],
-    //   "commands": [
-    //     {
-    //       "command": "workbench.action.nextEditor",
-    //       "args": []
-    //     }
-    //   ]
-    // },
   ],
-  // "vim.insertModeKeyBindings": [
-  //   {
-  //     "before": [
-  //       "f",
-  //       "d"
-  //     ],
-  //     "after": [
-  //       "<Esc>"
-  //     ]
-  //   }
-  // ],
   "vim.visualModeKeyBindingsNonRecursive": [
     {
       "before": [
@@ -1466,12 +1245,14 @@
   "metaGo.decoration.fontFamily": "Fira Code",
   "metaGo.decoration.width": 10,
   "metaGo.decoration.y": 13,
-  "eslint.autoFixOnSave": true,
   "peacock.affectActivityBar": false,
   "peacock.affectTitleBar": false,
   "git-graph.showStatusBarItem": false,
   "gitlens.mode.statusBar.alignment": "left",
   "peacock.showColorInStatusBar": false,
   "eslint.alwaysShowStatus": true,
-  "workbench.activityBar.visible": true
+  "workbench.activityBar.visible": true,
+  "editor.formatOnPaste": true,
+  "prettier.requireConfig": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode"
 }

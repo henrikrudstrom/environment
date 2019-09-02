@@ -9,5 +9,6 @@ bind refs n !git branch %(prompt)
 bind refs U !?git push --set-upstream origin %(branch)
 bind status a !?git commit --amend
 bind status P !?git push --force-with-lease
-bind status w !?git push origin
-
+bind status w !?git push origin 
+bind refs P !?git pull --rebase origin %(branch)
+bind refs R !?git rebase -i %(branch)
