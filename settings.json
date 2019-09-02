@@ -44,34 +44,34 @@
   "vim.useSystemClipboard": true,
   "vim.highlightedyank.enable": true,
   "vim.visualModeKeyBindings": [
-    {
-      "before": [
-        "<leader>",
-        "<space>"
-      ],
-      "after": [],
-      "commands": [
-        {
-          "command": "workbench.action.showCommands",
-          "args": []
-        }
-      ]
-    },
+    //   {
+    //     "before": [
+    //       "<leader>",
+    //       "<space>"
+    //     ],
+    //     "after": [],
+    //     "commands": [
+    //       {
+    //         "command": "workbench.action.showCommands",
+    //         "args": []
+    //       }
+    //     ]
+    //   },
   ],
   "vim.normalModeKeyBindings": [
-    {
-      "before": [
-        "<leader>",
-        "<space>"
-      ],
-      "after": [],
-      "commands": [
-        {
-          "command": "workbench.action.showCommands",
-          "args": []
-        }
-      ]
-    },
+    // {
+    //   "before": [
+    //     "<leader>",
+    //     "<space>"
+    //   ],
+    //   "after": [],
+    //   "commands": [
+    //     {
+    //       "command": "workbench.action.showCommands",
+    //       "args": []
+    //     }
+    //   ]
+    // },
     {
       "before": [
         "<leader>",
@@ -98,15 +98,39 @@
         }
       ]
     },
+    {
+      "before": [
+        "g",
+        "t"
+      ],
+      "after": [],
+      "commands": [
+        {
+          "command": "editor.action.goToTypeDefinition",
+          "args": []
+        }
+      ]
+    },
     // {
     //   "before": [
-    //     "g",
-    //     "t"
+    //     "s",
     //   ],
     //   "after": [],
     //   "commands": [
     //     {
-    //       "command": "editor.action.goToTypeDefinition",
+    //       "command": "metaGo.goto",
+    //       "args": []
+    //     }
+    //   ]
+    // },
+    // {
+    //   "before": [
+    //     "S",
+    //   ],
+    //   "after": [],
+    //   "commands": [
+    //     {
+    //       "command": "metaGo.selection",
     //       "args": []
     //     }
     //   ]
@@ -258,5 +282,14 @@
   "eslint.alwaysShowStatus": true,
   "workbench.activityBar.visible": false,
   "editor.formatOnPaste": true,
-  "prettier.requireConfig": true
+  "prettier.requireConfig": true,
+  "vim.easymotion": true,
+  "vim.easymotionMarkerFontFamily": "Fira Code",
+  "vim.easymotionMarkerYOffset": -7,
+  "vim.easymotionMarkerHeight": 17,
+  "vim.easymotionMarkerWidthPerChar": 9,
+  "vim.easymotionMarkerBackgroundColor": "#551e1e88",
+  "vim.easymotionMarkerForegroundColorOneChar": "#eeeeee",
+  "vim.easymotionMarkerForegroundColorTwoChar": "#eeeeee",
+  "vim.easymotionKeys": "tnserigkaoplhdfuc,mvjbwyx."
 }

@@ -16,7 +16,6 @@ code --install-extension Gruntfuggly.todo-tree
 code --install-extension hoovercj.ruby-linter
 code --install-extension jasonnutter.search-node-modules
 code --install-extension johnpapa.vscode-peacock
-code --install-extension metaseed.metago
 code --install-extension mhutchie.git-graph
 code --install-extension michelemelluso.code-beautifier
 code --install-extension monokai.theme-monokai-pro-vscode
