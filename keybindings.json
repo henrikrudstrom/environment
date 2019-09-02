@@ -1,10 +1,50 @@
 // Place your key bindings in this file to override the defaultsauto[]
 [
-
-{
-  "key": "ctrl+w c",
-"command": "workbench.action.closeActiveEditor",
-},
+  {
+    "key": "ctrl+w shift+o",
+    "command": "workbench.action.closeOtherEditors"
+  },
+  {
+    "key": "ctrl+w shift+c",
+    "command": "workbench.action.closeEditorsInGroup"
+  },
+  {
+    "key": "ctrl+w",
+    "command": "-extension.vim_ctrl+w",
+    "when": "editorTextFocus && vim.active && vim.use<C-w> && !inDebugRepl"
+  },
+  {
+    "key": "ctrl+w w",
+    "command": "workbench.action.switchWindow"
+  },
+  {
+    "key": "ctrl+w",
+    "command": "-workbench.action.switchWindow"
+  },
+  {
+    "key": "ctrl+w ctrl+r",
+    "command": "workbench.action.openRecent"
+  },
+  {
+    "key": "ctrl+r",
+    "command": "-workbench.action.openRecent"
+  },
+  {
+    "key": "ctrl+w m",
+    "command": "workbench.action.minimizeOtherEditors"
+  },
+  {
+    "key": "ctrl+w shift+m",
+    "command": "workbench.action.maximizeEditor"
+  },
+  {
+    "key": "ctrl+w b",
+    "command": "workbench.action.evenEditorWidths"
+  }
+  {
+    "key": "ctrl+w c",
+    "command": "workbench.action.closeActiveEditor",
+  },
   {
     "key": "ctrl+w up",
     "command": "workbench.action.focusAboveGroup"
@@ -20,6 +60,60 @@
   {
     "key": "ctrl+w right",
     "command": "workbench.action.focusRightGroup"
+  },
+  {
+    "key": "ctrl+w cmd+up",
+    "command": "workbench.action.moveEditorToAboveGroup",
+    "when": "!terminalFocus"
+  },
+  {
+    "key": "ctrl+w cmd+down",
+    "command": "workbench.action.moveEditorToBelowGroup",
+    "when": "!terminalFocus"
+  },
+  {
+    "key": "ctrl+w cmd+right",
+    "command": "workbench.action.moveEditorToRightGroup",
+    "when": "!terminalFocus"
+  },
+  {
+    "key": "ctrl+w cmd+left",
+    "command": "workbench.action.moveEditorToLeftGroup",
+    "when": "!terminalFocus"
+  },
+  // ergodox
+  {
+    "key": "ctrl+w u",
+    "command": "workbench.action.focusAboveGroup"
+  },
+  {
+    "key": "ctrl+w e",
+    "command": "workbench.action.focusBelowGroup"
+  },
+  {
+    "key": "ctrl+w n",
+    "command": "workbench.action.focusLeftGroup"
+  },
+  {
+    "key": "ctrl+w i",
+    "command": "workbench.action.focusRightGroup"
+  },
+  {
+    "key": "ctrl+w shift+u",
+    "command": "workbench.action.moveEditorToAboveGroup"
+  },
+  {
+    "key": "ctrl+w shift+e",
+    "command": "workbench.action.moveEditorToBelowGroup"
+  },
+  {
+    "key": "ctrl+w shift+n",
+    "command": "workbench.action.moveEditorToLeftGroup"
+  },
+  //End window shortcuts
+  {
+    "key": "ctrl+w shift+i",
+    "command": "workbench.action.moveEditorToRightGroup"
   },
   {
     "key": "cmd+alt+g shift+s",
@@ -105,32 +199,12 @@
     "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
   },
   {
-    "key": "ctrl+w cmd+up",
-    "command": "workbench.action.moveEditorToAboveGroup",
-    "when": "!terminalFocus"
-  },
-  {
-    "key": "ctrl+w cmd+down",
-    "command": "workbench.action.moveEditorToBelowGroup",
-    "when": "!terminalFocus"
-  },
-  {
     "key": "ctrl+cmd+left",
     "command": "-workbench.action.moveEditorToPreviousGroup"
   },
   {
     "key": "ctrl+cmd+right",
     "command": "-workbench.action.moveEditorToNextGroup"
-  },
-  {
-    "key": "ctrl+w cmd+right",
-    "command": "workbench.action.moveEditorToRightGroup",
-    "when": "!terminalFocus"
-  },
-  {
-    "key": "ctrl+w cmd+left",
-    "command": "workbench.action.moveEditorToLeftGroup",
-    "when": "!terminalFocus"
   },
   {
     "key": "cmd+'",
@@ -150,17 +224,4 @@
     "command": "-extension.vim_cmd+left",
     "when": "editorTextFocus && vim.active && vim.use<D-left> && !inDebugRepl && vim.mode != 'Insert'"
   },
-  {
-    "key": "ctrl+w",
-    "command": "-extension.vim_ctrl+w",
-    "when": "editorTextFocus && vim.active && vim.use<C-w> && !inDebugRepl"
-  },
-  {
-    "key": "ctrl+w w",
-    "command": "workbench.action.switchWindow"
-  },
-  {
-    "key": "ctrl+w",
-    "command": "-workbench.action.switchWindow"
-  }
 ]
