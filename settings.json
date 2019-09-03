@@ -44,34 +44,86 @@
   "vim.useSystemClipboard": true,
   "vim.highlightedyank.enable": true,
   "vim.visualModeKeyBindings": [
-    //   {
-    //     "before": [
-    //       "<leader>",
-    //       "<space>"
-    //     ],
-    //     "after": [],
-    //     "commands": [
-    //       {
-    //         "command": "workbench.action.showCommands",
-    //         "args": []
-    //       }
-    //     ]
-    //   },
+    // delete without overwriting clipboard
+    {
+      "before": [
+        "d"
+      ],
+      "after": [
+        "\"",
+        "_",
+        "d"
+      ],
+    },
+    {
+      "before": [
+        "x"
+      ],
+      "after": [
+        "\"",
+        "_",
+        "x"
+      ],
+    },
+    {
+      "before": [
+        "<leader>",
+        "d"
+      ],
+      "after": [
+        "d"
+      ],
+    },
+    {
+      "before": [
+        "<leader>",
+        "x"
+      ],
+      "after": [
+        "x"
+      ],
+    },
   ],
   "vim.normalModeKeyBindings": [
-    // {
-    //   "before": [
-    //     "<leader>",
-    //     "<space>"
-    //   ],
-    //   "after": [],
-    //   "commands": [
-    //     {
-    //       "command": "workbench.action.showCommands",
-    //       "args": []
-    //     }
-    //   ]
-    // },
+    // delete without overwiting clipboard
+    {
+      "before": [
+        "d"
+      ],
+      "after": [
+        "\"",
+        "_",
+        "d"
+      ],
+    },
+    {
+      "before": [
+        "x"
+      ],
+      "after": [
+        "\"",
+        "_",
+        "x"
+      ],
+    },
+    {
+      "before": [
+        "<leader>",
+        "d"
+      ],
+      "after": [
+        "d"
+      ],
+    },
+    {
+      "before": [
+        "<leader>",
+        "x"
+      ],
+      "after": [
+        "x"
+      ],
+    },
     {
       "before": [
         "<leader>",
@@ -80,7 +132,7 @@
       "after": [],
       "commands": [
         {
-          "command": "editor.action.smartSelect.grow",
+          "command": "editor.action.martSelect.grow",
           "args": []
         }
       ]
@@ -291,5 +343,7 @@
   "vim.easymotionMarkerBackgroundColor": "#551e1e88",
   "vim.easymotionMarkerForegroundColorOneChar": "#eeeeee",
   "vim.easymotionMarkerForegroundColorTwoChar": "#eeeeee",
-  "vim.easymotionKeys": "tnserigkaoplhdfuc,mvjbwyx."
+  "vim.easymotionKeys": "tnserigkaoplhdfuc,mvjbwyx.",
+  "workbench.editor.showTabs": true,
+  "eslint.autoFixOnSave": true
 }
