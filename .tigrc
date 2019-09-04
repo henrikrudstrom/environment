@@ -1,6 +1,5 @@
 set status-show-untracked-files = yes
 bind main ! !?git revert %(commit)
-bind main w !?git push origin
 bind main B !git rebase -i %(commit)
 bind main <C-H> !?git reset --hard %(commit)
 bind main <C-S> !?git reset --soft %(commit)
@@ -9,6 +8,9 @@ bind refs n !git branch %(prompt)
 bind refs U !?git push --set-upstream origin %(branch)
 bind status a !?git commit --amend
 bind status P !?git push --force-with-lease
-bind status w !?git push origin 
+bind status p !?git push origin 
+bind status <C-Y> !?git cherry-pick --continue
+bind status <C-X> +?rm %(file)
+bind status <C-A> !?git cherry-pick --abort
 bind refs P !?git pull --rebase origin %(branch)
 bind refs R !?git rebase -i %(branch)
