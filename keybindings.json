@@ -18,11 +18,19 @@
     "command": "workbench.action.switchWindow"
   },
   {
+    "key": "cmd+w cmd+w",
+    "command": "workbench.action.switchWindow"
+  },
+  {
     "key": "ctrl+w",
     "command": "-workbench.action.switchWindow"
   },
   {
-    "key": "cmd+w ctrl+r",
+    "key": "cmd+w r",
+    "command": "workbench.action.openRecent"
+  },
+  {
+    "key": "cmd+w cmd+r",
     "command": "workbench.action.openRecent"
   },
   {
@@ -30,8 +38,9 @@
     "command": "-workbench.action.openRecent"
   },
   {
-    "key": "cmd+w m",
-    "command": "workbench.action.minimizeOtherEditors"
+    "key": "cmd+w cmd+m",
+    "command": "workbench.action.toggleEditorWidths",
+    "when": "!terminalFocus"
   },
   {
     "key": "cmd+w shift+m",
@@ -39,6 +48,10 @@
   },
   {
     "key": "cmd+w b",
+    "command": "workbench.action.evenEditorWidths"
+  },
+  {
+    "key": "cmd+w cmd+b",
     "command": "workbench.action.evenEditorWidths"
   },
   {
@@ -110,11 +123,11 @@
     "key": "cmd+w shift+n",
     "command": "workbench.action.moveEditorToLeftGroup"
   },
-  //End window shortcuts
   {
     "key": "cmd+w shift+i",
     "command": "workbench.action.moveEditorToRightGroup"
   },
+  //End window shortcuts
   {
     "key": "cmd+alt+g shift+s",
     "command": "workbench.view.scm",
@@ -211,6 +224,14 @@
     "command": "workbench.action.terminal.toggleTerminal"
   },
   {
+    "key": "cmd+w t",
+    "command": "workbench.action.terminal.toggleTerminal"
+  },
+  {
+    "key": "cmd+w cmd+t",
+    "command": "workbench.action.terminal.toggleTerminal"
+  },
+  {
     "key": "ctrl+shift+[Equal]",
     "command": "-workbench.action.terminal.toggleTerminal"
   },
@@ -247,5 +268,10 @@
     "key": "cmd+w",
     "command": "-workbench.action.closeGroup",
     "when": "activeEditorGroupEmpty && multipleEditorGroups"
+  },
+  {
+    "key": "cmd+w cmd+m",
+    "command": "workbench.action.toggleMaximizedPanel",
+    "when": "terminalFocus"
   },
 ]

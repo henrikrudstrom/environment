@@ -44,84 +44,338 @@
   "vim.useSystemClipboard": true,
   "vim.highlightedyank.enable": true,
   "vim.visualModeKeyBindings": [
-    // delete without overwriting clipboard
     {
       "before": [
-        "d"
+        "s",
+        "s"
       ],
       "after": [
-        "\"",
-        "_",
-        "d"
-      ],
-    },
-    {
-      "before": [
-        "x"
-      ],
-      "after": [
-        "\"",
-        "_",
-        "x"
-      ],
-    },
-    {
-      "before": [
         "<leader>",
-        "d"
-      ],
-      "after": [
-        "d"
+        "<leader>",
+        "s"
       ],
     },
     {
       "before": [
-        "<leader>",
-        "x"
+        "s",
+        "f"
       ],
       "after": [
-        "x"
+        "<leader>",
+        "<leader>",
+        "f"
+      ],
+    },
+    {
+      "before": [
+        "s",
+        "F"
+      ],
+      "after": [
+        "<leader>",
+        "<leader>",
+        "F"
+      ],
+    },
+    {
+      "before": [
+        "s",
+        "t"
+      ],
+      "after": [
+        "<leader>",
+        "<leader>",
+        "t"
+      ],
+    },
+    {
+      "before": [
+        "s",
+        "T"
+      ],
+      "after": [
+        "<leader>",
+        "<leader>",
+        "T"
+      ],
+    },
+    {
+      "before": [
+        "s",
+        "w"
+      ],
+      "after": [
+        "<leader>",
+        "<leader>",
+        "w"
+      ],
+    },
+    {
+      "before": [
+        "s",
+        "b"
+      ],
+      "after": [
+        "<leader>",
+        "<leader>",
+        "b"
+      ],
+    },
+    {
+      "before": [
+        "s",
+        "l"
+      ],
+      "after": [
+        "<leader>",
+        "<leader>",
+        "l"
+      ],
+    },
+    {
+      "before": [
+        "s",
+        "h"
+      ],
+      "after": [
+        "<leader>",
+        "<leader>",
+        "h"
+      ],
+    },
+    {
+      "before": [
+        "s",
+        "e"
+      ],
+      "after": [
+        "<leader>",
+        "<leader>",
+        "e"
+      ],
+    },
+    {
+      "before": [
+        "s",
+        "g",
+        "e"
+      ],
+      "after": [
+        "<leader>",
+        "<leader>",
+        "g",
+        "e"
+      ],
+    },
+    {
+      "before": [
+        "s",
+        "j"
+      ],
+      "after": [
+        "<leader>",
+        "<leader>",
+        "j"
+      ],
+    },
+    {
+      "before": [
+        "s",
+        "k"
+      ],
+      "after": [
+        "<leader>",
+        "<leader>",
+        "k"
+      ],
+    },
+    {
+      "before": [
+        "s",
+        "/"
+      ],
+      "after": [
+        "<leader>",
+        "<leader>",
+        "/"
+      ],
+    },
+    {
+      "before": [
+        "S"
+      ],
+      "after": [
+        "<leader>",
+        "<leader>",
+        "2"
       ],
     },
   ],
   "vim.normalModeKeyBindings": [
-    // delete without overwiting clipboard
     {
       "before": [
-        "d"
+        "s",
+        "s"
       ],
       "after": [
-        "\"",
-        "_",
-        "d"
-      ],
-    },
-    {
-      "before": [
-        "x"
-      ],
-      "after": [
-        "\"",
-        "_",
-        "x"
-      ],
-    },
-    {
-      "before": [
         "<leader>",
-        "d"
-      ],
-      "after": [
-        "d"
+        "<leader>",
+        "s"
       ],
     },
     {
       "before": [
-        "<leader>",
-        "x"
+        "s",
+        "f"
       ],
       "after": [
-        "x"
+        "<leader>",
+        "<leader>",
+        "f"
+      ],
+    },
+    {
+      "before": [
+        "s",
+        "F"
+      ],
+      "after": [
+        "<leader>",
+        "<leader>",
+        "F"
+      ],
+    },
+    {
+      "before": [
+        "s",
+        "t"
+      ],
+      "after": [
+        "<leader>",
+        "<leader>",
+        "t"
+      ],
+    },
+    {
+      "before": [
+        "s",
+        "T"
+      ],
+      "after": [
+        "<leader>",
+        "<leader>",
+        "T"
+      ],
+    },
+    {
+      "before": [
+        "s",
+        "w"
+      ],
+      "after": [
+        "<leader>",
+        "<leader>",
+        "w"
+      ],
+    },
+    {
+      "before": [
+        "s",
+        "b"
+      ],
+      "after": [
+        "<leader>",
+        "<leader>",
+        "b"
+      ],
+    },
+    {
+      "before": [
+        "s",
+        "l"
+      ],
+      "after": [
+        "<leader>",
+        "<leader>",
+        "l"
+      ],
+    },
+    {
+      "before": [
+        "s",
+        "h"
+      ],
+      "after": [
+        "<leader>",
+        "<leader>",
+        "h"
+      ],
+    },
+    {
+      "before": [
+        "s",
+        "e"
+      ],
+      "after": [
+        "<leader>",
+        "<leader>",
+        "e"
+      ],
+    },
+    {
+      "before": [
+        "s",
+        "g",
+        "e"
+      ],
+      "after": [
+        "<leader>",
+        "<leader>",
+        "g",
+        "e"
+      ],
+    },
+    {
+      "before": [
+        "s",
+        "j"
+      ],
+      "after": [
+        "<leader>",
+        "<leader>",
+        "j"
+      ],
+    },
+    {
+      "before": [
+        "s",
+        "k"
+      ],
+      "after": [
+        "<leader>",
+        "<leader>",
+        "k"
+      ],
+    },
+    {
+      "before": [
+        "s",
+        "/"
+      ],
+      "after": [
+        "<leader>",
+        "<leader>",
+        "/"
+      ],
+    },
+    {
+      "before": [
+        "S"
+      ],
+      "after": [
+        "<leader>",
+        "<leader>",
+        "2"
       ],
     },
     {
@@ -163,44 +417,6 @@
         }
       ]
     },
-    // {
-    //   "before": [
-    //     "s",
-    //   ],
-    //   "after": [],
-    //   "commands": [
-    //     {
-    //       "command": "metaGo.goto",
-    //       "args": []
-    //     }
-    //   ]
-    // },
-    // {
-    //   "before": [
-    //     "S",
-    //   ],
-    //   "after": [],
-    //   "commands": [
-    //     {
-    //       "command": "metaGo.selection",
-    //       "args": []
-    //     }
-    //   ]
-    // },
-    // {
-    //   "before": [
-    //     "<leader>",
-    //     "w",
-    //     "L"
-    //   ],
-    //   "after": [],
-    //   "commands": [
-    //     {
-    //       "command": "workbench.action.moveActiveEditorGroupRight",
-    //       "args": []
-    //     }
-    //   ]
-    // },
     {
       "before": [
         "<leader>",
@@ -217,6 +433,83 @@
     },
   ],
   "vim.visualModeKeyBindingsNonRecursive": [
+    // delete without overwriting clipboard
+    {
+      "before": [
+        "d"
+      ],
+      "after": [
+        "\"",
+        "_",
+        "d"
+      ],
+    },
+    {
+      "before": [
+        "x"
+      ],
+      "after": [
+        "\"",
+        "_",
+        "x"
+      ],
+    },
+    {
+      "before": [
+        "c"
+      ],
+      "after": [
+        "\"",
+        "_",
+        "c"
+      ],
+    },
+    {
+      "before": [
+        "p"
+      ],
+      "after": [
+        "\"",
+        "_",
+        "p"
+      ],
+    },
+    {
+      "before": [
+        "<leader>",
+        "d"
+      ],
+      "after": [
+        "d"
+      ],
+    },
+    {
+      "before": [
+        "<leader>",
+        "x"
+      ],
+      "after": [
+        "x"
+      ],
+    },
+    {
+      "before": [
+        "<leader>",
+        "c"
+      ],
+      "after": [
+        "c"
+      ],
+    },
+    {
+      "before": [
+        "<leader>",
+        "p"
+      ],
+      "after": [
+        "p"
+      ],
+    },
     {
       "before": [
         ">"
@@ -235,6 +528,73 @@
     },
   ],
   "vim.normalModeKeyBindingsNonRecursive": [
+    // delete without overwriting clipboard
+    {
+      "before": [
+        "d"
+      ],
+      "after": [
+        "\"",
+        "_",
+        "d"
+      ],
+    },
+    {
+      "before": [
+        "x"
+      ],
+      "after": [
+        "\"",
+        "_",
+        "x"
+      ],
+    },
+    {
+      "before": [
+        "c"
+      ],
+      "after": [
+        "\"",
+        "_",
+        "c"
+      ],
+    },
+    {
+      "before": [
+        "<leader>",
+        "d"
+      ],
+      "after": [
+        "d"
+      ],
+    },
+    {
+      "before": [
+        "<leader>",
+        "x"
+      ],
+      "after": [
+        "x"
+      ],
+    },
+    {
+      "before": [
+        "<leader>",
+        "c"
+      ],
+      "after": [
+        "c"
+      ],
+    },
+    {
+      "before": [
+        "<leader>",
+        "p"
+      ],
+      "after": [
+        "p"
+      ],
+    },
     {
       "before": [
         ">"
@@ -345,5 +705,10 @@
   "vim.easymotionMarkerForegroundColorTwoChar": "#eeeeee",
   "vim.easymotionKeys": "tnserigkaoplhdfuc,mvjbwyx.",
   "workbench.editor.showTabs": true,
-  "eslint.autoFixOnSave": true
+  "eslint.autoFixOnSave": true,
+  "vim.debug.loggingLevelForConsole": "debug",
+  "terminal.external.osxExec": "iTerm2.app",
+  "terminal.integrated.splitCwd": "workspaceRoot",
+  "editor.cursorSurroundingLines": 4,
+  "githubPullRequests.showInSCM": true
 }
