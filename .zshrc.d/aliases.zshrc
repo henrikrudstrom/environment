@@ -1,4 +1,3 @@
-echo "hello"
 # Always copy contents of directories (r)ecursively and explain (v) what was done
 alias cp='cp -rv'
 

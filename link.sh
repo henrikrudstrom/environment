@@ -6,3 +6,4 @@ ln -h .tigrc ~/.tigrc
 ln -h .zprofile ~/.zprofile
 ln -h .zshrc ~/.zshrc
 ln -s `pwd`/.zshrc.d ~/
+ln -h .gitconfig ~/.gitconfig
