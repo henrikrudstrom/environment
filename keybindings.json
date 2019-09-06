@@ -1,277 +1,281 @@
 // Place your key bindings in this file to override the defaultsauto[]
 [
-  {
-    "key": "cmd+w shift+o",
-    "command": "workbench.action.closeOtherEditors"
-  },
-  {
-    "key": "cmd+w shift+c",
-    "command": "workbench.action.closeEditorsInGroup"
-  },
-  {
-    "key": "ctrl+w",
-    "command": "-extension.vim_ctrl+w",
-    "when": "editorTextFocus && vim.active && vim.use<C-w> && !inDebugRepl"
-  },
-  {
-    "key": "cmd+w w",
-    "command": "workbench.action.switchWindow"
-  },
-  {
-    "key": "cmd+w cmd+w",
-    "command": "workbench.action.switchWindow"
-  },
-  {
-    "key": "ctrl+w",
-    "command": "-workbench.action.switchWindow"
-  },
-  {
-    "key": "cmd+w r",
-    "command": "workbench.action.openRecent"
-  },
-  {
-    "key": "cmd+w cmd+r",
-    "command": "workbench.action.openRecent"
-  },
-  {
-    "key": "ctrl+r",
-    "command": "-workbench.action.openRecent"
-  },
-  {
-    "key": "cmd+w cmd+m",
-    "command": "workbench.action.toggleEditorWidths",
-    "when": "!terminalFocus"
-  },
-  {
-    "key": "cmd+w shift+m",
-    "command": "workbench.action.maximizeEditor"
-  },
-  {
-    "key": "cmd+w b",
-    "command": "workbench.action.evenEditorWidths"
-  },
-  {
-    "key": "cmd+w cmd+b",
-    "command": "workbench.action.evenEditorWidths"
-  },
-  {
-    "key": "cmd+w c",
-    "command": "workbench.action.closeActiveEditor",
-  },
-  {
-    "key": "cmd+w up",
-    "command": "workbench.action.focusAboveGroup"
-  },
-  {
-    "key": "cmd+w down",
-    "command": "workbench.action.focusBelowGroup"
-  },
-  {
-    "key": "cmd+w left",
-    "command": "workbench.action.focusLeftGroup"
-  },
-  {
-    "key": "cmd+w right",
-    "command": "workbench.action.focusRightGroup"
-  },
-  {
-    "key": "cmd+w cmd+up",
-    "command": "workbench.action.moveEditorToAboveGroup",
-    "when": "!terminalFocus"
-  },
-  {
-    "key": "cmd+w cmd+down",
-    "command": "workbench.action.moveEditorToBelowGroup",
-    "when": "!terminalFocus"
-  },
-  {
-    "key": "cmd+w cmd+right",
-    "command": "workbench.action.moveEditorToRightGroup",
-    "when": "!terminalFocus"
-  },
-  {
-    "key": "cmd+w cmd+left",
-    "command": "workbench.action.moveEditorToLeftGroup",
-    "when": "!terminalFocus"
-  },
-  // ergodox
-  {
-    "key": "cmd+w u",
-    "command": "workbench.action.focusAboveGroup"
-  },
-  {
-    "key": "cmd+w e",
-    "command": "workbench.action.focusBelowGroup"
-  },
-  {
-    "key": "cmd+w n",
-    "command": "workbench.action.focusLeftGroup"
-  },
-  {
-    "key": "cmd+w i",
-    "command": "workbench.action.focusRightGroup"
-  },
-  {
-    "key": "cmd+w shift+u",
-    "command": "workbench.action.moveEditorToAboveGroup"
-  },
-  {
-    "key": "cmd+w shift+e",
-    "command": "workbench.action.moveEditorToBelowGroup"
-  },
-  {
-    "key": "cmd+w shift+n",
-    "command": "workbench.action.moveEditorToLeftGroup"
-  },
-  {
-    "key": "cmd+w shift+i",
-    "command": "workbench.action.moveEditorToRightGroup"
-  },
-  //End window shortcuts
-  {
-    "key": "cmd+alt+g shift+s",
-    "command": "workbench.view.scm",
-    "when": "gitlens:enabled && config.gitlens.keymap == 'chorded'"
-  },
-  {
-    "key": "cmd+n",
-    "command": "explorer.newFile",
-    "when": "explorerViewletFocus && explorerViewletVisible && !inputFocus"
-  },
-  {
-    "key": "cmd+shift+n",
-    "command": "explorer.newFolder",
-    "when": "explorerViewletFocus && explorerViewletVisible && !inputFocus"
-  },
-  {
-    "key": "ctrl+alt+cmd+tab",
-    "command": "workbench.action.showAllEditors"
-  },
-  {
-    "key": "alt+cmd+tab",
-    "command": "-workbench.action.showAllEditors"
-  },
-  {
-    "key": "alt+cmd+tab",
-    "command": "workbench.action.quickSwitchWindow"
-  },
-  {
-    "key": "alt+cmd+tab",
-    "command": "workbench.action.quickOpenSelectNext",
-    "when": "inQuickOpen"
-  },
-  {
-    "key": "ctrl+n",
-    "command": "-workbench.action.quickOpenSelectNext",
-    "when": "inQuickOpen"
-  },
-  {
-    "key": "shift+alt+cmd+tab",
-    "command": "workbench.action.quickOpenSelectPrevious",
-    "when": "inQuickOpen"
-  },
-  {
-    "key": "ctrl+p",
-    "command": "-workbench.action.quickOpenSelectPrevious",
-    "when": "inQuickOpen"
-  },
-  {
-    "key": "ctrl+escape",
-    "command": "workbench.action.focusActiveEditorGroup",
-    "when": "!editorTextFocus"
-  },
-  {
-    "key": "ctrl+o",
-    "command": "-extension.vim_ctrl+o",
-    "when": "editorTextFocus && vim.active && vim.use<C-o> && !inDebugRepl"
-  },
-  {
-    "key": "ctrl+o",
-    "command": "workbench.action.navigateBack"
-  },
-  {
-    "key": "ctrl+-",
-    "command": "-workbench.action.navigateBack"
-  },
-  {
-    "key": "ctrl+shift+o",
-    "command": "workbench.action.navigateForward"
-  },
-  {
-    "key": "ctrl+shift+-",
-    "command": "-workbench.action.navigateForward"
-  },
-  {
-    "key": "cmd+enter",
-    "command": "renameFile",
-    "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
-  },
-  {
-    "key": "enter",
-    "command": "-renameFile",
-    "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
-  },
-  {
-    "key": "ctrl+cmd+left",
-    "command": "-workbench.action.moveEditorToPreviousGroup"
-  },
-  {
-    "key": "ctrl+cmd+right",
-    "command": "-workbench.action.moveEditorToNextGroup"
-  },
-  {
-    "key": "cmd+'",
-    "command": "workbench.action.terminal.toggleTerminal"
-  },
-  {
-    "key": "cmd+w t",
-    "command": "workbench.action.terminal.toggleTerminal"
-  },
-  {
-    "key": "cmd+w cmd+t",
-    "command": "workbench.action.terminal.toggleTerminal"
-  },
-  {
-    "key": "ctrl+shift+[Equal]",
-    "command": "-workbench.action.terminal.toggleTerminal"
-  },
-  {
-    "key": "shift+alt+cmd+left shift+alt+cmd+right",
-    "command": "extension.vim_cmd+left",
-    "when": "editorTextFocus && vim.active && vim.use<D-left> && !inDebugRepl && vim.mode != 'Insert'"
-  },
-  {
-    "key": "cmd+left",
-    "command": "-extension.vim_cmd+left",
-    "when": "editorTextFocus && vim.active && vim.use<D-left> && !inDebugRepl && vim.mode != 'Insert'"
-  },
-  {
-    "key": "cmd+w c",
-    "command": "workbench.action.closeWindow",
-    "when": "!editorIsOpen && !multipleEditorGroups"
-  },
-  {
-    "key": "cmd+w",
-    "command": "-workbench.action.closeWindow",
-    "when": "!editorIsOpen && !multipleEditorGroups"
-  },
-  {
-    "key": "cmd+w",
-    "command": "-workbench.action.closeActiveEditor"
-  },
-  {
-    "key": "cmd+w c",
-    "command": "workbench.action.closeGroup",
-    "when": "activeEditorGroupEmpty && multipleEditorGroups"
-  },
-  {
-    "key": "cmd+w",
-    "command": "-workbench.action.closeGroup",
-    "when": "activeEditorGroupEmpty && multipleEditorGroups"
-  },
-  {
-    "key": "cmd+w cmd+m",
-    "command": "workbench.action.toggleMaximizedPanel",
-    "when": "terminalFocus"
-  },
+    {
+        "key": "cmd+w shift+o",
+        "command": "workbench.action.closeOtherEditors"
+    },
+    {
+        "key": "cmd+w shift+c",
+        "command": "workbench.action.closeEditorsInGroup"
+    },
+    {
+        "key": "ctrl+w",
+        "command": "-extension.vim_ctrl+w",
+        "when": "editorTextFocus && vim.active && vim.use<C-w> && !inDebugRepl"
+    },
+    {
+        "key": "cmd+w w",
+        "command": "workbench.action.switchWindow"
+    },
+    {
+        "key": "cmd+w cmd+w",
+        "command": "workbench.action.switchWindow"
+    },
+    {
+        "key": "ctrl+w",
+        "command": "-workbench.action.switchWindow"
+    },
+    {
+        "key": "cmd+w r",
+        "command": "workbench.action.openRecent"
+    },
+    {
+        "key": "cmd+w cmd+r",
+        "command": "workbench.action.openRecent"
+    },
+    {
+        "key": "ctrl+r",
+        "command": "-workbench.action.openRecent"
+    },
+    {
+        "key": "cmd+w cmd+m",
+        "command": "workbench.action.toggleEditorWidths",
+        "when": "!terminalFocus"
+    },
+    {
+        "key": "cmd+w shift+m",
+        "command": "workbench.action.maximizeEditor"
+    },
+    {
+        "key": "cmd+w b",
+        "command": "workbench.action.evenEditorWidths"
+    },
+    {
+        "key": "cmd+w cmd+b",
+        "command": "workbench.action.evenEditorWidths"
+    },
+    {
+        "key": "cmd+w c",
+        "command": "workbench.action.closeActiveEditor",
+    },
+    {
+        "key": "cmd+w cmd+c",
+        "command": "workbench.action.closeActiveEditor",
+    },
+    {
+        "key": "cmd+w up",
+        "command": "workbench.action.focusAboveGroup"
+    },
+    {
+        "key": "cmd+w down",
+        "command": "workbench.action.focusBelowGroup"
+    },
+    {
+        "key": "cmd+w left",
+        "command": "workbench.action.focusLeftGroup"
+    },
+    {
+        "key": "cmd+w right",
+        "command": "workbench.action.focusRightGroup"
+    },
+    {
+        "key": "cmd+w cmd+up",
+        "command": "workbench.action.moveEditorToAboveGroup",
+        "when": "!terminalFocus"
+    },
+    {
+        "key": "cmd+w cmd+down",
+        "command": "workbench.action.moveEditorToBelowGroup",
+        "when": "!terminalFocus"
+    },
+    {
+        "key": "cmd+w cmd+right",
+        "command": "workbench.action.moveEditorToRightGroup",
+        "when": "!terminalFocus"
+    },
+    {
+        "key": "cmd+w cmd+left",
+        "command": "workbench.action.moveEditorToLeftGroup",
+        "when": "!terminalFocus"
+    },
+    // ergodox
+    {
+        "key": "cmd+w u",
+        "command": "workbench.action.focusAboveGroup"
+    },
+    {
+        "key": "cmd+w e",
+        "command": "workbench.action.focusBelowGroup"
+    },
+    {
+        "key": "cmd+w n",
+        "command": "workbench.action.focusLeftGroup"
+    },
+    {
+        "key": "cmd+w i",
+        "command": "workbench.action.focusRightGroup"
+    },
+    {
+        "key": "cmd+w cmd+u",
+        "command": "workbench.action.moveEditorToAboveGroup"
+    },
+    {
+        "key": "cmd+w cmd+e",
+        "command": "workbench.action.moveEditorToBelowGroup"
+    },
+    {
+        "key": "cmd+w cmd+n",
+        "command": "workbench.action.moveEditorToLeftGroup"
+    },
+    {
+        "key": "cmd+w cmd+i",
+        "command": "workbench.action.moveEditorToRightGroup"
+    },
+    //End window shortcuts
+    {
+        "key": "cmd+alt+g shift+s",
+        "command": "workbench.view.scm",
+        "when": "gitlens:enabled && config.gitlens.keymap == 'chorded'"
+    },
+    {
+        "key": "cmd+n",
+        "command": "explorer.newFile",
+        "when": "explorerViewletFocus && explorerViewletVisible && !inputFocus"
+    },
+    {
+        "key": "cmd+shift+n",
+        "command": "explorer.newFolder",
+        "when": "explorerViewletFocus && explorerViewletVisible && !inputFocus"
+    },
+    {
+        "key": "ctrl+alt+cmd+tab",
+        "command": "workbench.action.showAllEditors"
+    },
+    {
+        "key": "alt+cmd+tab",
+        "command": "-workbench.action.showAllEditors"
+    },
+    {
+        "key": "alt+cmd+tab",
+        "command": "workbench.action.quickSwitchWindow"
+    },
+    {
+        "key": "alt+cmd+tab",
+        "command": "workbench.action.quickOpenSelectNext",
+        "when": "inQuickOpen"
+    },
+    {
+        "key": "ctrl+n",
+        "command": "-workbench.action.quickOpenSelectNext",
+        "when": "inQuickOpen"
+    },
+    {
+        "key": "shift+alt+cmd+tab",
+        "command": "workbench.action.quickOpenSelectPrevious",
+        "when": "inQuickOpen"
+    },
+    {
+        "key": "ctrl+p",
+        "command": "-workbench.action.quickOpenSelectPrevious",
+        "when": "inQuickOpen"
+    },
+    {
+        "key": "ctrl+escape",
+        "command": "workbench.action.focusActiveEditorGroup",
+        "when": "!editorTextFocus"
+    },
+    {
+        "key": "ctrl+o",
+        "command": "-extension.vim_ctrl+o",
+        "when": "editorTextFocus && vim.active && vim.use<C-o> && !inDebugRepl"
+    },
+    {
+        "key": "ctrl+o",
+        "command": "workbench.action.navigateBack"
+    },
+    {
+        "key": "ctrl+-",
+        "command": "-workbench.action.navigateBack"
+    },
+    {
+        "key": "ctrl+shift+o",
+        "command": "workbench.action.navigateForward"
+    },
+    {
+        "key": "ctrl+shift+-",
+        "command": "-workbench.action.navigateForward"
+    },
+    {
+        "key": "cmd+enter",
+        "command": "renameFile",
+        "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
+    },
+    {
+        "key": "enter",
+        "command": "-renameFile",
+        "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
+    },
+    {
+        "key": "ctrl+cmd+left",
+        "command": "-workbench.action.moveEditorToPreviousGroup"
+    },
+    {
+        "key": "ctrl+cmd+right",
+        "command": "-workbench.action.moveEditorToNextGroup"
+    },
+    {
+        "key": "cmd+'",
+        "command": "workbench.action.terminal.toggleTerminal"
+    },
+    {
+        "key": "cmd+w t",
+        "command": "workbench.action.terminal.toggleTerminal"
+    },
+    {
+        "key": "cmd+w cmd+t",
+        "command": "workbench.action.terminal.toggleTerminal"
+    },
+    {
+        "key": "ctrl+shift+[Equal]",
+        "command": "-workbench.action.terminal.toggleTerminal"
+    },
+    {
+        "key": "shift+alt+cmd+left shift+alt+cmd+right",
+        "command": "extension.vim_cmd+left",
+        "when": "editorTextFocus && vim.active && vim.use<D-left> && !inDebugRepl && vim.mode != 'Insert'"
+    },
+    {
+        "key": "cmd+left",
+        "command": "-extension.vim_cmd+left",
+        "when": "editorTextFocus && vim.active && vim.use<D-left> && !inDebugRepl && vim.mode != 'Insert'"
+    },
+    {
+        "key": "cmd+w c",
+        "command": "workbench.action.closeWindow",
+        "when": "!editorIsOpen && !multipleEditorGroups"
+    },
+    {
+        "key": "cmd+w",
+        "command": "-workbench.action.closeWindow",
+        "when": "!editorIsOpen && !multipleEditorGroups"
+    },
+    {
+        "key": "cmd+w",
+        "command": "-workbench.action.closeActiveEditor"
+    },
+    {
+        "key": "cmd+w c",
+        "command": "workbench.action.closeGroup",
+        "when": "activeEditorGroupEmpty && multipleEditorGroups"
+    },
+    {
+        "key": "cmd+w",
+        "command": "-workbench.action.closeGroup",
+        "when": "activeEditorGroupEmpty && multipleEditorGroups"
+    },
+    {
+        "key": "cmd+w cmd+m",
+        "command": "workbench.action.toggleMaximizedPanel",
+        "when": "terminalFocus"
+    },
 ]
