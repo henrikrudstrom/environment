@@ -1,9 +1,28 @@
-ln -h settings.json ~/Library/Application\ Support/Code/User/settings.json
-ln -h keybindings.json ~/Library/Application\ Support/Code/User/keybindings.json
-ln -s `pwd`/snippets/ ~/Library/Application\ Support/Code/User/
-ln -s `pwd`/.hammerspoon ~/
-ln -h .tigrc ~/.tigrc
-ln -h .zprofile ~/.zprofile
-ln -h .zshrc ~/.zshrc
-ln -s `pwd`/.zshrc.d ~/
-ln -h .gitconfig ~/.gitconfig
+OVERWRITE=$1
+link_file() {
+    if [ $OVERWRITE -gt 0 ]
+    then 
+        rm -v "$2"
+
+    fi
+    ln -h "$1" "$2"
+}
+
+link_folder() {
+
+    if [ $OVERWRITE -gt 0 ]
+    then 
+        rm -rv "$2$1"
+    fi
+    ln -s "`pwd`/$1" "$2" 
+}
+
+link_file settings.json ~/Library/Application\ Support/Code/User/settings.json
+link_file keybindings.json ~/Library/Application\ Support/Code/User/keybindings.json
+link_folder snippets/ ~/Library/Application\ Support/Code/User/
+link_folder .hammerspoon ~/
+link_file .tigrc ~/.tigrc
+link_file .zprofile ~/.zprofile
+link_file .zshrc ~/.zshrc
+link_folder .zshrc.d ~/
+link_file .gitconfig ~/.gitconfig
