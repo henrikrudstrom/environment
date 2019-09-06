@@ -34,7 +34,7 @@
     lgall = !git lg --all
     lga = !git lgall
 
-    pushf = push — force-with-lease
+    pushf = push --force-with-lease
 
 	; stash aliases
     sp = stash pop
@@ -42,8 +42,8 @@
     sa = stash apply
     s = stash
 
-	brv = branch -v --color
-    brav = branch -av --color
+	br = branch -v --color
+    bra = branch -av --color
     brlocaloneline = !git branch | grep -v \\* | xargs
     brdeletelocal = !git branch -D `git brlocaloneline` || echo "Nothing to delete"
     brallfromremotes = !git branch -a | grep ‘remotes/' | grep -v "HEAD" | sed ‘s/remotes\\///'
@@ -60,10 +60,9 @@
     cloner = clone --recursive
     cl = clone
     ci = commit
-    br = branch
     fetchp = fetch --prune
     fetcha = fetch --all
     dc = diff --cached
-    mergef = merge — ff-only
+    mergef = merge --ff-only
     aliase = !vim ~/.gitconfig
-	undo = git reset --soft HEAD~1
+	undo = reset --soft HEAD~1

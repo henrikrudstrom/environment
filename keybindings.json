@@ -278,4 +278,38 @@
         "command": "workbench.action.toggleMaximizedPanel",
         "when": "terminalFocus"
     },
+    {
+        "key": "cmd+e",
+        "command": "-actions.findWithSelection"
+    },
+    {
+        "key": "cmd+e d",
+        "command": "extension.dash.specific",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "ctrl+h",
+        "command": "-extension.dash.specific",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "cmd+e cmd+d",
+        "command": "extension.dash.all",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "ctrl+alt+h",
+        "command": "-extension.dash.all",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "cmd+e ctrl+d",
+        "command": "extension.dash.customSyntax",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "alt+h",
+        "command": "-extension.dash.customSyntax",
+        "when": "editorTextFocus"
+    },
 ]
