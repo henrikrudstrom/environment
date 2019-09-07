@@ -1,7 +1,7 @@
 // Place your key bindings in this file to override the defaultsauto[]
 [
     {
-        "key": "cmd+w shift+o",
+        "key": "cmd+w cmd+o",
         "command": "workbench.action.closeOtherEditors"
     },
     {
@@ -283,7 +283,12 @@
         "command": "-actions.findWithSelection"
     },
     {
-        "key": "cmd+e d",
+        "key": "cmd+m d",
+        "command": "extension.dash.specific",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "cmd+m cmd+d",
         "command": "extension.dash.specific",
         "when": "editorTextFocus"
     },
@@ -293,7 +298,12 @@
         "when": "editorTextFocus"
     },
     {
-        "key": "cmd+e cmd+d",
+        "key": "cmd+m a",
+        "command": "extension.dash.all",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "cmd+m cmd+a",
         "command": "extension.dash.all",
         "when": "editorTextFocus"
     },
@@ -303,7 +313,12 @@
         "when": "editorTextFocus"
     },
     {
-        "key": "cmd+e ctrl+d",
+        "key": "cmd+m s",
+        "command": "extension.dash.customSyntax",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "cmd+m cmd+s",
         "command": "extension.dash.customSyntax",
         "when": "editorTextFocus"
     },
@@ -311,5 +326,29 @@
         "key": "alt+h",
         "command": "-extension.dash.customSyntax",
         "when": "editorTextFocus"
+    },
+    {
+        "key": "cmd+w shift+o",
+        "command": "workbench.action.closeEditorsInOtherGroups"
+    },
+    {
+        "key": "cmd+e cmd+r",
+        "command": "editor.action.referenceSearch.trigger",
+        "when": "editorHasReferenceProvider && editorTextFocus && !inReferenceSearchEditor && !isInEmbeddedEditor"
+    },
+    {
+        "key": "shift+f12",
+        "command": "-editor.action.referenceSearch.trigger",
+        "when": "editorHasReferenceProvider && editorTextFocus && !inReferenceSearchEditor && !isInEmbeddedEditor"
+    },
+    {
+        "key": "cmd+e cmd+h",
+        "command": "editor.showCallHierarchy",
+        "when": "editorHasCallHierarchyProvider && editorTextFocus && !inReferenceSearchEditor"
+    },
+    {
+        "key": "shift+alt+h",
+        "command": "-editor.showCallHierarchy",
+        "when": "editorHasCallHierarchyProvider && editorTextFocus && !inReferenceSearchEditor"
     },
 ]
