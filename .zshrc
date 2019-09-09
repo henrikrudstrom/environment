@@ -1,5 +1,2 @@
-for file in ~/.zshrc.d/*.zshrc;
-do
-echo sourcing $file
-source "$file"
-done
+source ~/.zshrc.d/oh-my-zsh.zshrc
+source ~/.zshrc.d/aliases.zshrc
