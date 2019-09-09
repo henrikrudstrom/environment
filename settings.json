@@ -736,6 +736,7 @@
   "files.trimFinalNewlines": true,
   "files.trimTrailingWhitespace": true,
   "editor.cursorBlinking": "phase",
-  "editor.cursorStyle": "underline",
-  "workbench.editor.highlightModifiedTabs": true
+  "workbench.editor.highlightModifiedTabs": true,
+  "todo-tree.tree.hideTreeWhenEmpty": false,
+  "todo-tree.tree.showInExplorer": false
 }
