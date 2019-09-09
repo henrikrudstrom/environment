@@ -732,5 +732,10 @@
   "terminal.external.osxExec": "iTerm2.app",
   "terminal.integrated.splitCwd": "workspaceRoot",
   "editor.cursorSurroundingLines": 4,
-  "githubPullRequests.showInSCM": true
+  "githubPullRequests.showInSCM": true,
+  "files.trimFinalNewlines": true,
+  "files.trimTrailingWhitespace": true,
+  "editor.cursorBlinking": "phase",
+  "editor.cursorStyle": "underline",
+  "workbench.editor.highlightModifiedTabs": true
 }
