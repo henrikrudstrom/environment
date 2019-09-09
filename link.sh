@@ -26,3 +26,4 @@ link_file .zprofile ~/.zprofile
 link_file .zshrc ~/.zshrc
 link_folder .zshrc.d ~/
 link_file .gitconfig ~/.gitconfig
+link_file karabiner.json ~/.config/karabiner/karabiner.json
