@@ -22,9 +22,11 @@ alias hs='history | grep'
 
 ## get rid of command not found ##
 alias cd..='cd ..'
- 
+
 ## a quick way to get out of current directory ##
 alias ..='cd ..'
 alias ...='cd ../../'
 alias ....='cd ../../../'
 alias .....='cd ../../../../'
+
+alias aliase='vim ~/Dev/env/environment/.zshrc.d/aliases.zshrc'
