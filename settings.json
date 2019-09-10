@@ -782,11 +782,6 @@
       ]
     },
   ],
-  "workbench.colorCustomizations": {
-    "statusBar.background": "#B48EAD",
-    "statusBar.noFolderBackground": "#B48EAD",
-    "statusBar.debuggingBackground": "#B48EAD"
-  },
   "workbench.iconTheme": "material-icon-theme",
   "peacock.favoriteColors": [
     {
@@ -856,11 +851,8 @@
   "metaGo.decoration.fontFamily": "Fira Code",
   "metaGo.decoration.width": 10,
   "metaGo.decoration.y": 13,
-  "peacock.affectActivityBar": false,
-  "peacock.affectTitleBar": false,
   "git-graph.showStatusBarItem": false,
   "gitlens.mode.statusBar.alignment": "left",
-  "peacock.showColorInStatusBar": false,
   "eslint.alwaysShowStatus": true,
   "workbench.activityBar.visible": false,
   "editor.formatOnPaste": true,
@@ -887,5 +879,8 @@
   "workbench.editor.highlightModifiedTabs": true,
   "todo-tree.tree.hideTreeWhenEmpty": false,
   "todo-tree.tree.showInExplorer": false,
-  "vim.foldfix": true
+  "vim.foldfix": true,
+  "peacock.showColorInStatusBar": false,
+  "peacock.affectStatusBar": false,
+  "peacock.affectActivityBar": false
 }
