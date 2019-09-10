@@ -15,38 +15,60 @@ obj.homepage = "https://github.com/Hammerspoon/Spoons"
 obj.license = "MIT - https://opensource.org/licenses/MIT"
 
 function obj:init()
+    local function isDown(event)
+        return hs.eventtap.event.types.keyDown == event:getType()
+    end
+    local function isKeyWithFn(event, key, down)
+        downIfRequired = down and isDown(event) or true
+
+        return event:getFlags()['fn'] and string.lower(event:getCharacters(true)) == key and downIfRequired
+    end
+    local function sendKeyEventWithoutFn(event, key)
+        flags = event:getFlags()
+        flags['fn'] = nil
+        print(flags['shift'])
+        print(flags['alt'])
+        print(flags['cmd'])
+        -- flags = flags['cmd'] and { 'cmd'} or {}
+        -- modifiers = {}
+        -- if flags['shift'] then
+        --     table.insert(modifiers, 'shift')
+        -- end
+        -- if flags['alt'] then
+        --     table.insert
+
+
+        local modifiers={}
+        local n=0
+
+        for k,v in pairs(flags) do
+            n=n+1
+            modifiers[n]=k
+        end
+        return true, {hs.eventtap.event.newKeyEvent(modifiers, key, isDown(event))}
+
+    end
     local function catcher(event)
-        if event:getFlags()['fn'] and event:getCharacters() == "n" then
-            return true, {hs.eventtap.event.newKeyEvent({}, "left", true)}
-        elseif event:getFlags()['fn'] and event:getCharacters() == "i" then
-
-            print("iiiiii")
-            return true, {hs.eventtap.event.newKeyEvent({}, "right", true)}
-        elseif event:getFlags()['fn'] and event:getCharacters() == "e" then
-            return true, {hs.eventtap.event.newKeyEvent({}, "down", true)}
-        elseif event:getFlags()['fn'] and event:getCharacters() == "u" then
-            print("uuuuu")
-            return true, {hs.eventtap.event.newKeyEvent({}, "up", true)}
-        elseif event:getFlags()['fn'] and event:getCharacters() == "l" then
-
-            print("llllll")
-            return true, {hs.eventtap.event.newScrollEvent({2, 0}, {}, "line")}
-        elseif event:getFlags()['fn'] and event:getCharacters() == "y" then
-            return true, {hs.eventtap.event.newScrollEvent({-2, 0}, {}, "line")}
-        elseif event:getFlags()['fn'] and event:getCharacters() == "k" then
-            return true, {hs.eventtap.event.newScrollEvent({0, -2}, {}, "line")}
-        elseif event:getFlags()['fn'] and event:getCharacters() == "j" then
+        if isKeyWithFn(event, 'n') then
+            return sendKeyEventWithoutFn(event, "left")
+        elseif isKeyWithFn(event, 'i') then
+            return sendKeyEventWithoutFn(event, "right")
+        elseif isKeyWithFn(event, 'e') then
+            return sendKeyEventWithoutFn(event, "down")
+        elseif isKeyWithFn(event, 'u') then
+            return sendKeyEventWithoutFn(event, "up")
+        elseif isKeyWithFn(event, 'l', true) then
+            return true, {hs.eventtap.event.newScrollEvent({1, 0}, {}, "line")}
+        elseif isKeyWithFn(event, 'y', true) then
+            return true, {hs.eventtap.event.newScrollEvent({-1, 0}, {}, "line")}
+        elseif isKeyWithFn(event, 'k', true) then
+            return true, {hs.eventtap.event.newScrollEvent({0, -1}, {}, "line")}
+        elseif isKeyWithFn(event, 'j', true) then
             return true, {hs.eventtap.event.newScrollEvent({0, 2}, {}, "line")}
-        elseif event:getFlags()['fn'] and event:getCharacters() == "," then
-            local currentpos = hs.mouse.getAbsolutePosition()
-            return true, {hs.eventtap.leftClick(currentpos)}
-        elseif event:getFlags()['fn'] and event:getCharacters() == "." then
-            local currentpos = hs.mouse.getAbsolutePosition()
-            return true, {hs.eventtap.rightClick(currentpos)}
         end
     end
     print("Initializing fn arrow keys")
-    fn_tapper = hs.eventtap.new({hs.eventtap.event.types.keyDown}, catcher):start()
+    fn_tapper = hs.eventtap.new({hs.eventtap.event.types.keyDown, hs.eventtap.event.types.keyUp}, catcher):start()
 end
 
 return obj
