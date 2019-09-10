@@ -1,7 +1,7 @@
 local hyper = {"shift", "ctrl", "alt", "cmd"}
 
 hs.loadSpoon("MiroWindowsManager")
-
+hs.loadSpoon("FnMate")
 hs.window.animationDuration = 0.3
 spoon.MiroWindowsManager:bindHotkeys({
   up = {hyper, "up"},
