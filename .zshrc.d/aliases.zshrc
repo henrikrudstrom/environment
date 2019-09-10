@@ -2,16 +2,16 @@
 alias cp='cp -rv'
 
 # List contents with colors for file types, (A)lmost all hidden files (without . and ..), in (C)olumns, with class indicators (F)
-alias ls="exa --color=always -F"
-alias ll="exa --color=always -Fl"
-alias llfu='exa -bghlS --git'
+alias ls="exa --color=always -Fa"
+alias ll="exa --color=always -Fla"
+alias llfu='exa -bghlSa --git'
 alias lll="ll | less"
-alias lt="exa --color=always -FT --level 2"
+alias lt="exa --color=always -FTa --level 2"
 
-alias lt1="exa --color=always -FT --level 1"
-alias lt2="exa --color=always -FT --level 2"
-alias lt3="exa --color=always -FT --level 3"
-alias lt4="exa --color=always -FT --level 4"
+alias lt1="exa --color=always -FTa --level 1"
+alias lt2="exa --color=always -FTa --level 2"
+alias lt3="exa --color=always -FTa --level 3"
+alias lt4="exa --color=always -FTa --level 4"
 # Explain (v) what was done when moving a file
 alias mv='mv -v'
 
