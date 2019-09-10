@@ -592,7 +592,6 @@
         }
       ]
     },
-
     {
       "before": [
         "<leader>",
@@ -607,7 +606,6 @@
         }
       ]
     },
-
     {
       "before": [
         "<leader>",
@@ -636,7 +634,6 @@
         }
       ]
     },
-
     {
       "before": [
         "<leader>",
@@ -647,6 +644,56 @@
       "commands": [
         {
           "command": "bookmarks.clearFromAllFiles",
+          "args": [],
+        }
+      ]
+    },
+    // overwrite vim.marks with bookmarks
+    {
+      "before": [
+        "m"
+      ],
+      "after": [],
+      "commands": [
+        {
+          "command": "bookmarks.toggleLabeled",
+          "args": [],
+        }
+      ],
+    },
+    {
+      "before": [
+        "'"
+      ],
+      "after": [],
+      "commands": [
+        {
+          "command": "bookmarks.list",
+          "args": [],
+        }
+      ]
+    },
+    {
+      "before": [
+        "`"
+      ],
+      "after": [],
+      "commands": [
+        {
+          "command": "bookmarks.listFromAllFiles",
+          "args": [],
+        }
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "w"
+      ],
+      "after": [],
+      "commands": [
+        {
+          "command": "workbench.action.files.save",
           "args": [],
         }
       ]
