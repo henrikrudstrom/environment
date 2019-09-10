@@ -550,6 +550,107 @@
     },
   ],
   "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": [
+        "<leader>",
+        "m",
+        "m"
+      ],
+      "after": [],
+      "commands": [
+        {
+          "command": "bookmarks.toggle",
+          "args": [],
+        }
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "m",
+        "n"
+      ],
+      "after": [],
+      "commands": [
+        {
+          "command": "bookmarks.jumpToNext",
+          "args": [],
+        }
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "m",
+        "p"
+      ],
+      "after": [],
+      "commands": [
+        {
+          "command": "bookmarks.jumpToPrevious",
+          "args": [],
+        }
+      ]
+    },
+
+    {
+      "before": [
+        "<leader>",
+        "m",
+        "l"
+      ],
+      "after": [],
+      "commands": [
+        {
+          "command": "bookmarks.list",
+          "args": [],
+        }
+      ]
+    },
+
+    {
+      "before": [
+        "<leader>",
+        "m",
+        "L"
+      ],
+      "after": [],
+      "commands": [
+        {
+          "command": "bookmarks.listFromAllFiles",
+          "args": [],
+        }
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "m",
+        "c"
+      ],
+      "after": [],
+      "commands": [
+        {
+          "command": "bookmarks.clear",
+          "args": [],
+        }
+      ]
+    },
+
+    {
+      "before": [
+        "<leader>",
+        "m",
+        "C"
+      ],
+      "after": [],
+      "commands": [
+        {
+          "command": "bookmarks.clearFromAllFiles",
+          "args": [],
+        }
+      ]
+    },
     // delete without overwriting clipboard
     {
       "before": [
@@ -738,5 +839,6 @@
   "editor.cursorBlinking": "phase",
   "workbench.editor.highlightModifiedTabs": true,
   "todo-tree.tree.hideTreeWhenEmpty": false,
-  "todo-tree.tree.showInExplorer": false
+  "todo-tree.tree.showInExplorer": false,
+  "vim.foldfix": true
 }

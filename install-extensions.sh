@@ -1,6 +1,7 @@
 code --install-extension 2gua.rainbow-brackets
 code --install-extension 766b.go-outliner
 code --install-extension aaron-bond.better-comments
+code --install-extension alefragnani.Bookmarks
 code --install-extension anseki.vscode-color
 code --install-extension azemoh.one-monokai
 code --install-extension bhshawon.node-json-autocomplete

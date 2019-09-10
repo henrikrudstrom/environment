@@ -468,4 +468,127 @@
         "command": "-references-view.find",
         "when": "editorHasReferenceProvider"
     },
+    {
+        "key": "cmd+m cmd+n",
+        "command": "bookmarks.jumpToNext",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "cmd+m n",
+        "command": "bookmarks.jumpToNext",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "alt+cmd+l",
+        "command": "-bookmarks.jumpToNext",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "cmd+m cmd+p",
+        "command": "bookmarks.jumpToPrevious",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "cmd+m p",
+        "command": "bookmarks.jumpToPrevious",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "alt+cmd+j",
+        "command": "-bookmarks.jumpToPrevious",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "cmd+m cmd+m",
+        "command": "bookmarks.toggle",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "cmd+m m",
+        "command": "bookmarks.toggle",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "alt+cmd+k",
+        "command": "-bookmarks.toggle",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "cmd+m shift+cmd+n",
+        "command": "bookmarks.expandSelectionToNext",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "cmd+m shift+n",
+        "command": "bookmarks.expandSelectionToNext",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "shift+alt+l",
+        "command": "-bookmarks.expandSelectionToNext",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "cmd+m shift+cmd+p",
+        "command": "bookmarks.expandSelectionToPrevious",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "cmd+m shift+p",
+        "command": "bookmarks.expandSelectionToPrevious",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "shift+alt+j",
+        "command": "-bookmarks.expandSelectionToPrevious",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "cmd+m cmd+l",
+        "command": "bookmarks.list"
+    },
+    {
+        "key": "cmd+m l",
+        "command": "bookmarks.list"
+    },
+    {
+        "key": "cmd+m shift+cmd+l",
+        "command": "bookmarks.listFromAllFiles"
+    },
+    {
+        "key": "cmd+m shift+l",
+        "command": "bookmarks.listFromAllFiles"
+    },
+    {
+        "key": "cmd+m shift+cmd+m",
+        "command": "bookmarks.toggleLabeled"
+    },
+    {
+        "key": "cmd+m shift+m",
+        "command": "bookmarks.toggleLabeled"
+    },
+    {
+        "key": "cmd+m shift+cmd+c",
+        "command": "bookmarks.clear"
+    },
+    {
+        "key": "cmd+m shift+c",
+        "command": "bookmarks.clear"
+    },
+    {
+        "key": "shift+cmd+m shift+alt+cmd+c",
+        "command": "bookmarks.clearFromAllFiles"
+    },
+    {
+        "key": "shift+cmd+m shift+alt+c",
+        "command": "bookmarks.clearFromAllFiles"
+    },
+    {
+        "key": "cmd+m cmd+b",
+        "command": "workbench.view.extension.bookmarks"
+    },
+    {
+        "key": "cmd+m b",
+        "command": "workbench.view.extension.bookmarks"
+    }
 ]
