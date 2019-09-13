@@ -1,6 +1,9 @@
 local hyper = {"shift", "ctrl", "alt", "cmd"}
-
-hs.loadSpoon("MiroWindowsManager")
+hs.loadSpoon("SpoonInstall")
+spoon.SpoonInstall.use_syncinstall = true
+Install = spoon.SpoonInstall
+Install:andUse("MiroWindowsManager")
+-- hs.loadSpoon("MiroWindowsManager")
 hs.loadSpoon("FnMate")
 -- hs.loadSpoon("ModTap")
 hs.window.animationDuration = 0.3
@@ -53,7 +56,7 @@ symbolLayerMap = {
   [','] = {'.', true},
   ['.'] = {'/', true}
 }
-mapEnabled = true
+--[[ mapEnabled = false
 function processKeys(event)
     if event:getKeyCode() == hs.keycodes.map["f20"] then
         mapEnabled = isDown(event)
@@ -72,4 +75,4 @@ function processKeys(event)
 
     return false
 end
-tap = hs.eventtap.new({hs.eventtap.event.types.keyDown, hs.eventtap.event.types.keyUp}, processKeys):start()
+tap = hs.eventtap.new({hs.eventtap.event.types.keyDown, hs.eventtap.event.types.keyUp}, processKeys):start() ]]

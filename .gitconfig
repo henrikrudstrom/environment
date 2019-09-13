@@ -62,6 +62,7 @@
     cloner = clone --recursive
     cl = clone
     ci = commit
+	cia = commit --amend
     fetchp = fetch --prune
     fetcha = fetch --all
     dc = diff --cached
