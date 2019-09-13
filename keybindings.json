@@ -483,6 +483,26 @@
         "when": "editorHasReferenceProvider"
     },
     {
+        "key": "cmd+e cmd+b",
+        "command": "editor.debug.action.toggleBreakpoint",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "cmd+e b",
+        "command": "editor.debug.action.toggleBreakpoint",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "cmd+e cmd+shift+b",
+        "command": "editor.debug.action.toggleInlineBreakpoint",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "cmd+e shift+b",
+        "command": "editor.debug.action.toggleInlineBreakpoint",
+        "when": "editorTextFocus"
+    },
+    {
         "key": "cmd+m cmd+n",
         "command": "bookmarks.jumpToNext",
         "when": "editorTextFocus"
@@ -604,5 +624,19 @@
     {
         "key": "cmd+m b",
         "command": "workbench.view.extension.bookmarks"
+    },
+    {
+        "key": "cmd+e cmd+enter",
+        "command": "editor.action.rename",
+        "when": "editorHasRenameProvider && editorTextFocus && !editorReadonly"
+    },
+    {
+        "key": "f2",
+        "command": "-editor.action.rename",
+        "when": "editorHasRenameProvider && editorTextFocus && !editorReadonly"
+    },
+    {
+        "key": "cmd+w cmd+j",
+        "command": "io.orta.jest.show-channel"
     }
 ]
