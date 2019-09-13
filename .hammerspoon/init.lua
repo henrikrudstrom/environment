@@ -1,4 +1,6 @@
 local hyper = {"shift", "ctrl", "alt", "cmd"}
+hs.hotkey.bind(hyper, "f1", "hammerspoon reloaded", nil, hs.reload)
+hs.hotkey.bind(hyper, "f2", nil, nil, function() hs.openConsole(true) end)
 hs.loadSpoon("SpoonInstall")
 spoon.SpoonInstall.use_syncinstall = true
 Install = spoon.SpoonInstall
@@ -14,14 +16,31 @@ spoon.MiroWindowsManager:bindHotkeys({
   left = {hyper, "left"},
   fullscreen = {hyper, "f"}
 })
--- symbolLayer = hs.hotkey.modal.new( {}, 'f20' );
--- symbolLayer:bind( '', 'n', function() hs.eventtap.keyStroke( { }, '=' ) end )
--- function symbolLayer:entered()
---   hs.alert("entered")
--- end
--- function symbolLayer:exited()
---   hs.alert("exited")
--- end
+-- get bundle id with command: osascript -e 'id of app "Name of App"'
+Chrome="com.google.Chrome"
+Trello="com.atlassian.trello"
+
+function openUrlInTrello(url)
+  hs.application.launchOrFocusByBundleID(Trello)
+  local trello = hs.application.applicationsForBundleID(Trello)[1]
+  print("app", trello)
+  hs.pasteboard.setContents(url)
+  hs.eventtap.event.newKeyEvent({"alt", "cmd"}, "v", true):post()
+  hs.eventtap.event.newKeyEvent({"alt", "cmd"}, "v", false):post()
+end
+-- openUrlInTrello("https://trello.com/c/HdGMA1Cp/247-finne-ut-av-hvorfor-p%C3%A5loggede-brukere-av-og-til-f%C3%A5r-logg-inn-for-%C3%A5-stemme-n%C3%A5r-de-g%C3%A5r-inn-p%C3%A5-en-artikkel-med-avstemning")
+Install:andUse("URLDispatcher",
+               {
+                 config = {
+                   url_patterns = {
+                     { "https?://trello.com", nil, openUrlInTrello },
+                   },
+                   default_handler = Chrome
+                 },
+                 start = true
+               }
+)
+
 local function isDown(event)
     return hs.eventtap.event.types.keyDown == event:getType()
 end
@@ -56,7 +75,7 @@ symbolLayerMap = {
   [','] = {'.', true},
   ['.'] = {'/', true}
 }
---[[ mapEnabled = false
+mapEnabled = false
 function processKeys(event)
     if event:getKeyCode() == hs.keycodes.map["f20"] then
         mapEnabled = isDown(event)
@@ -75,4 +94,4 @@ function processKeys(event)
 
     return false
 end
-tap = hs.eventtap.new({hs.eventtap.event.types.keyDown, hs.eventtap.event.types.keyUp}, processKeys):start() ]]
+tap = hs.eventtap.new({hs.eventtap.event.types.keyDown, hs.eventtap.event.types.keyUp}, processKeys):start()
