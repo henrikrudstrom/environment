@@ -44,6 +44,8 @@
 
 	br = branch -v --color
     bra = branch -av --color
+	brD = branch -D
+
     brlocaloneline = !git branch | grep -v \\* | xargs
     brdeletelocal = !git branch -D `git brlocaloneline` || echo "Nothing to delete"
     brallfromremotes = !git branch -a | grep ‘remotes/' | grep -v "HEAD" | sed ‘s/remotes\\///'
