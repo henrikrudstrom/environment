@@ -18,25 +18,16 @@ function obj:init()
     local function isDown(event)
         return hs.eventtap.event.types.keyDown == event:getType()
     end
+
     local function isKeyWithFn(event, key, down)
-        downIfRequired = down and isDown(event) or true
+        local downIfRequired = down and isDown(event) or true
 
         return event:getFlags()['fn'] and string.lower(event:getCharacters(true)) == key and downIfRequired
     end
-    local function sendKeyEventWithoutFn(event, key)
-        flags = event:getFlags()
-        flags['fn'] = nil
-        print(flags['shift'])
-        print(flags['alt'])
-        print(flags['cmd'])
-        -- flags = flags['cmd'] and { 'cmd'} or {}
-        -- modifiers = {}
-        -- if flags['shift'] then
-        --     table.insert(modifiers, 'shift')
-        -- end
-        -- if flags['alt'] then
-        --     table.insert
 
+    local function sendKeyEventWithoutFn(event, key)
+        local flags = event:getFlags()
+        flags['fn'] = nil
 
         local modifiers={}
         local n=0
@@ -45,8 +36,8 @@ function obj:init()
             n=n+1
             modifiers[n]=k
         end
-        return true, {hs.eventtap.event.newKeyEvent(modifiers, key, isDown(event))}
 
+        return true, {hs.eventtap.event.newKeyEvent(modifiers, key, isDown(event))}
     end
     local function catcher(event)
         if isKeyWithFn(event, 'n') then
