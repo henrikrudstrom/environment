@@ -14,6 +14,18 @@ obj.author = "ashfinal <ashfinal@gmail.com>"
 obj.homepage = "https://github.com/Hammerspoon/Spoons"
 obj.license = "MIT - https://opensource.org/licenses/MIT"
 
+obj.keys = {
+    up = "i",
+    down = "k",
+    left = "j",
+    right = "l",
+    scrollUp = "y",
+    scrollDown = "h",
+    scrollLeft = "u",
+    scrollRight = "o"
+}
+obj.scrollStep = 1
+
 function obj:init()
     local function isDown(event)
         return hs.eventtap.event.types.keyDown == event:getType()
@@ -40,22 +52,22 @@ function obj:init()
         return true, {hs.eventtap.event.newKeyEvent(modifiers, key, isDown(event))}
     end
     local function catcher(event)
-        if isKeyWithFn(event, 'n') then
+        if isKeyWithFn(event, obj.keys.left) then
             return sendKeyEventWithoutFn(event, "left")
-        elseif isKeyWithFn(event, 'i') then
+        elseif isKeyWithFn(event, obj.keys.right) then
             return sendKeyEventWithoutFn(event, "right")
-        elseif isKeyWithFn(event, 'e') then
+        elseif isKeyWithFn(event, obj.keys.down) then
             return sendKeyEventWithoutFn(event, "down")
-        elseif isKeyWithFn(event, 'u') then
+        elseif isKeyWithFn(event, obj.keys.up) then
             return sendKeyEventWithoutFn(event, "up")
-        elseif isKeyWithFn(event, 'l', true) then
-            return true, {hs.eventtap.event.newScrollEvent({1, 0}, {}, "line")}
-        elseif isKeyWithFn(event, 'y', true) then
-            return true, {hs.eventtap.event.newScrollEvent({-1, 0}, {}, "line")}
-        elseif isKeyWithFn(event, 'k', true) then
-            return true, {hs.eventtap.event.newScrollEvent({0, -1}, {}, "line")}
-        elseif isKeyWithFn(event, 'j', true) then
-            return true, {hs.eventtap.event.newScrollEvent({0, 2}, {}, "line")}
+        elseif isKeyWithFn(event, obj.keys.scrollLeft, true) then
+            return true, {hs.eventtap.event.newScrollEvent({obj.scrollStep, 0}, {}, "line")}
+        elseif isKeyWithFn(event, obj.keys.scrollRight, true) then
+            return true, {hs.eventtap.event.newScrollEvent({-obj.scrollStep, 0}, {}, "line")}
+        elseif isKeyWithFn(event, obj.keys.scrollDown, true) then
+            return true, {hs.eventtap.event.newScrollEvent({0, -obj.scrollStep}, {}, "line")}
+        elseif isKeyWithFn(event, obj.keys.scrollUp, true) then
+            return true, {hs.eventtap.event.newScrollEvent({0, obj.scrollStep}, {}, "line")}
         end
     end
     print("Initializing fn arrow keys")

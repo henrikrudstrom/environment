@@ -1,24 +1,56 @@
-local hyper = {"shift", "ctrl", "alt", "cmd"}
-hs.hotkey.bind(hyper, "f1", "hammerspoon reloaded", nil, hs.reload)
-hs.hotkey.bind(hyper, "f2", nil, nil, function() hs.openConsole(true) end)
+local open = require("open")
+local remapper = require("remapper")
+local toggleKeyboard = require("toggleKeyboard")
+
 hs.loadSpoon("SpoonInstall")
 spoon.SpoonInstall.use_syncinstall = true
-Install = spoon.SpoonInstall
+local Install = spoon.SpoonInstall
+
+
+local hyper = {"shift", "ctrl", "alt", "cmd"}
+
+hs.hotkey.bind(hyper, "f1", "hammerspoon reloaded", nil, hs.reload)
+hs.hotkey.bind(hyper, "f2", nil, nil, hs.toggleConsole)
+-- hs.hotkey.bind(hyper, "f4", toggleKeyboard.setVanilla)
+hs.hotkey.bind(hyper, "c", open.application("Google Chrome"))
+hs.hotkey.bind(hyper, "o", open.application("Visual Studio Code"))
+hs.hotkey.bind(hyper, "t", open.application("com.googlecode.iterm2"))
+hs.hotkey.bind(hyper, "s", open.application("Slack"))
+hs.hotkey.bind(hyper, "f", open.application("Finder"))
+hs.hotkey.bind(hyper, "g", open.application("MailPlane"))
+hs.hotkey.bind(hyper, "r", open.application("Trello"))
+hs.hotkey.bind(hyper, "n", function() hs.notify.show("hello", "close me", "this is just a test") end)
+
 Install:andUse("MiroWindowsManager")
--- hs.loadSpoon("MiroWindowsManager")
-hs.loadSpoon("FnMate")
--- hs.loadSpoon("ModTap")
 hs.window.animationDuration = 0.3
 spoon.MiroWindowsManager:bindHotkeys({
-  up = {hyper, "up"},
-  right = {hyper, "right"},
-  down = {hyper, "down"},
-  left = {hyper, "left"},
+  up = {hyper, "f8"},
+  right = {hyper, "f19"},
+  down = {hyper, "f18"},
+  left = {hyper, "f17"},
   fullscreen = {hyper, "f"}
 })
+
+
+hs.spoons.use("FnMate", { config = {
+  keys = {
+      up = "u",
+      down = "e",
+      left = "n",
+      right = "i",
+      scrollUp = "j",
+      scrollDown = "k",
+      scrollLeft = "l",
+      scrollRight = "y"
+  },
+  scrollStep = 1
+}})
+
+
 -- get bundle id with command: osascript -e 'id of app "Name of App"'
-Chrome="com.google.Chrome"
-Trello="com.atlassian.trello"
+local Chrome="com.google.Chrome"
+local Trello="com.atlassian.trello"
+
 
 function openUrlInTrello(url)
   hs.application.launchOrFocusByBundleID(Trello)
@@ -41,18 +73,15 @@ Install:andUse("URLDispatcher",
                }
 )
 
-local function isDown(event)
-    return hs.eventtap.event.types.keyDown == event:getType()
-end
-symbolLayerMap = {
+remapper("f20", {
   q = { '`', true },
   w = { '2', true },
   f = { '[', false },
   p = { ']', false},
   b = { ';', true },
   j = { '`', false },
-  l = { '\'', false },
-  u = { '\'', true },
+  l = { '\'', true },
+  u = { '\'', false },
   y = { '8', true },
   [';'] = { '6', true },
   a = {'7', true},
@@ -74,24 +103,17 @@ symbolLayerMap = {
   h = {',', true},
   [','] = {'.', true},
   ['.'] = {'/', true}
-}
-mapEnabled = false
-function processKeys(event)
-    if event:getKeyCode() == hs.keycodes.map["f20"] then
-        mapEnabled = isDown(event)
-        return true
-    end
-    if mapEnabled then
-      local mapping = symbolLayerMap[event:getCharacters()]
-      if mapping ~= nil then
-        local flags = event:getFlags()
-        if mapping[2] and flags['shift'] == nil then
-          table.insert(flags, 'shift')
-        end
-        return true, {hs.eventtap.event.newKeyEvent(flags, mapping[1], isDown(event))}
-      end
-    end
+})
 
-    return false
-end
-tap = hs.eventtap.new({hs.eventtap.event.types.keyDown, hs.eventtap.event.types.keyUp}, processKeys):start()
+
+Install:andUse("FadeLogo",
+               {
+                 config = {
+                   default_run = 0.1,
+                   run_time = 0.2,
+                   fade_out_time = 0.2,
+                   zoom_scale_factor = 1.05
+                 },
+                 start = true
+               }
+)
