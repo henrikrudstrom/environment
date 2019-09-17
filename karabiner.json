@@ -16,7 +16,7 @@
                 },
                 "rules": [
                     {
-                        "description": "Change spacebar to left_shift. (Post spacebar if pressed alone)",
+                        "description": "Change spacebar to f20. (Post spacebar if pressed alone)",
                         "manipulators": [
                             {
                                 "from": {
@@ -29,7 +29,7 @@
                                 },
                                 "to": [
                                     {
-                                        "key_code": "left_shift"
+                                        "key_code": "f20"
                                     }
                                 ],
                                 "to_if_alone": [
@@ -43,7 +43,7 @@
                     },
 
                     {
-                        "description": "r to f24 when held",
+                        "description": "r to fn when held",
                         "manipulators": [
                             {
                                 "from": {
@@ -70,7 +70,7 @@
                     },
 
                     {
-                        "description": "esc to f20 when held.",
+                        "description": "esc to left-shift when held.",
                         "manipulators": [
                             {
                                 "from": {
@@ -83,7 +83,7 @@
                                 },
                                 "to": [
                                     {
-                                        "key_code": "f20"
+                                        "key_code": "left_shift"
                                     }
                                 ],
                                 "to_if_alone": [
@@ -96,12 +96,13 @@
                         ]
                     },
 
+
                     {
-                        "description": "backslash to f20 when held.",
+                        "description": "o to right_shift when held.",
                         "manipulators": [
                             {
                                 "from": {
-                                    "key_code": "backslash",
+                                    "key_code": "semicolon",
                                     "modifiers": {
                                         "optional": [
                                             "any"
@@ -110,12 +111,39 @@
                                 },
                                 "to": [
                                     {
-                                        "key_code": "f20"
+                                        "key_code": "right_shift"
                                     }
                                 ],
                                 "to_if_alone": [
                                     {
-                                        "key_code": "backslash"
+                                        "key_code": "semicolon"
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+
+                    {
+                        "description": "a to right_shift when held.",
+                        "manipulators": [
+                            {
+                                "from": {
+                                    "key_code": "a",
+                                    "modifiers": {
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "right_shift"
+                                    }
+                                ],
+                                "to_if_alone": [
+                                    {
+                                        "key_code": "a"
                                     }
                                 ],
                                 "type": "basic"
@@ -260,6 +288,22 @@
                     },
                     "to": {
                         "key_code": "right_control"
+                    }
+                },
+                {
+                    "from": {
+                        "key_code": "quote"
+                    },
+                    "to": {
+                        "key_code": "delete_or_backspace"
+                    }
+                },
+                {
+                    "from": {
+                        "key_code": "backslash"
+                    },
+                    "to": {
+                        "key_code": "delete_or_backspace"
                     }
                 }
             ],
