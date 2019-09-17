@@ -1,8 +1,3 @@
-# If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
-eval "$(rbenv init -)"
-
-source "/Users/henrik.rudstrom/dev/amedia/tools/init.zsh"
 # Path to your oh-my-zsh installation.
 export ZSH="/Users/henrik.rudstrom/.oh-my-zsh"
 fpath=(/usr/local/share/zsh-completions $fpath)
