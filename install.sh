@@ -1,7 +1,6 @@
 OVERWRITE=$1
 link_file() {
-    if [ $OVERWRITE -gt 0 ]
-    then 
+    if [ $OVERWRITE -gt 0 ]; then
         rm -v "$2"
 
     fi
@@ -10,11 +9,10 @@ link_file() {
 
 link_folder() {
 
-    if [ $OVERWRITE -gt 0 ]
-    then 
+    if [ $OVERWRITE -gt 0 ]; then
         rm -rv "$2$1"
     fi
-    ln -s "`pwd`/$1" "$2" 
+    ln -s "$(pwd)/$1" "$2"
 }
 
 link_file settings.json ~/Library/Application\ Support/Code/User/settings.json
@@ -26,4 +24,5 @@ link_file .zprofile ~/.zprofile
 link_file .zshrc ~/.zshrc
 link_folder .zshrc.d ~/
 link_file .gitconfig ~/.gitconfig
-link_file karabiner.json ~/.config/karabiner/karabiner.json
+rm -v ~/.config/karabiner/karabiner.json
+cp -v karabiner.json ~/.config/karabiner/karabiner.json
