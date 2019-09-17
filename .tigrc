@@ -3,12 +3,13 @@ bind main ! !?git revert %(commit)
 bind main B !git rebase -i %(commit)
 bind main <C-H> !?git reset --hard %(commit)
 bind main <C-S> !?git reset --soft %(commit)
+bind main O !?git checkout %(commit)
 
 bind refs n !git branch %(prompt)
 bind refs U !?git push --set-upstream origin %(branch)
 bind status a !?git commit --amend
 bind status P !?git push --force-with-lease
-bind status p !?git push origin 
+bind status p !?git push origin
 bind status <C-Y> !?git cherry-pick --continue
 bind status <C-X> +?rm %(file)
 bind status <C-A> !?git cherry-pick --abort
