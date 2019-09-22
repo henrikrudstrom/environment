@@ -2,6 +2,7 @@ local open = require("open")
 local remapper = require("remapper")
 local toggleKeyboard = require("toggleKeyboard")
 
+require("hs.ipc")
 hs.loadSpoon("SpoonInstall")
 spoon.SpoonInstall.use_syncinstall = true
 local Install = spoon.SpoonInstall
@@ -100,7 +101,7 @@ remapper("f20", {
   c = {'[', true},
   d = {']', true},
   v = {'3', true},
-  m = {'-', true},
+  m = {'-', false},
   h = {',', true},
   [','] = {'.', true},
   ['.'] = {'/', true}

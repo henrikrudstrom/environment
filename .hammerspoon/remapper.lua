@@ -17,7 +17,6 @@ function init(toggleKey, symbolMap)
     end
 
     function processKeys(event)
-    print(hs.inspect(event:getFlags()))
         if event:getKeyCode() == hs.keycodes.map[toggleKey] then
             mapEnabled = isDown(event)
             return true
