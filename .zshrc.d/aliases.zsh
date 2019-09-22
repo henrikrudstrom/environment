@@ -23,7 +23,7 @@ alias wget='wget -c'
 
 alias nis='npm install --save'
 alias nisd='npm install --save-dev'
-alias hs='history | grep'
+alias hst='history | grep'
 
 ## get rid of command not found ##
 alias cd..='cd ..'
@@ -34,4 +34,4 @@ alias ...='cd ../../'
 alias ....='cd ../../../'
 alias .....='cd ../../../../'
 
-alias aliase='vim ~/Dev/env/environment/.zshrc.d/aliases.zshrc'
+alias aliase='vim ~/Dev/env/environment/.zshrc.d/aliases.zsh'
