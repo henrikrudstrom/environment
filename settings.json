@@ -1,4 +1,7 @@
 {
+  "terminal.integrated.env.osx": {
+    "ISK": "$PWD"
+  },
   "gitlens.views.repositories.location": "scm",
   "gitlens.views.fileHistory.location": "explorer",
   "gitlens.views.lineHistory.location": "explorer",
@@ -493,7 +496,8 @@
       "after": [
         "\"",
         "_",
-        "p"
+        "d",
+        "P"
       ],
     },
     {
@@ -882,5 +886,9 @@
   "vim.foldfix": true,
   "peacock.showColorInStatusBar": false,
   "peacock.affectStatusBar": false,
-  "peacock.affectActivityBar": false
+  "peacock.affectActivityBar": false,
+  "go.useLanguageServer": true,
+  "[dockerfile]": {
+    "editor.defaultFormatter": "ms-azuretools.vscode-docker"
+  }
 }
