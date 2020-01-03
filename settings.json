@@ -1,5 +1,4 @@
 {
-
   "gitlens.views.repositories.location": "scm",
   "gitlens.views.fileHistory.location": "explorer",
   "gitlens.views.lineHistory.location": "explorer",
@@ -25,7 +24,25 @@
   "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
+  "[go]": {
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": true
+    }
+  },
+  "go.coverOnSave": true,
+  "go.coverageDecorator": {
+    "type": "gutter",
+    "coveredHighlightColor": "rgba(64,128,128,0.5)",
+    "uncoveredHighlightColor": "rgba(128,64,64,0.25)",
+    "coveredGutterStyle": "blockgreen",
+    "uncoveredGutterStyle": "blockred"
+  },
+  "go.coverOnSingleTest": true,
   "editor.formatOnSave": true,
+  "go.testEnvVars": {
+    "LOG_LEVEL": "DEBUG"
+  },
   "mocha.files.glob": "build/test/**/*.js",
   "mocha.showErrorPopup": false,
   "[css]": {
@@ -454,6 +471,30 @@
         }
       ]
     },
+    {
+      "before": [
+        "u"
+      ],
+      "after": [],
+      "commands": [
+        {
+          "command": "undo",
+          "args": []
+        }
+      ]
+    },
+    {
+      "before": [
+        "<C-o>"
+      ],
+      "after": [],
+      "commands": [
+        {
+          "command": "redo",
+          "args": []
+        }
+      ]
+    }
   ],
   "vim.visualModeKeyBindingsNonRecursive": [
     // delete without overwriting clipboard
@@ -858,7 +899,6 @@
   "eslint.alwaysShowStatus": true,
   "workbench.activityBar.visible": false,
   "editor.formatOnPaste": true,
-  "prettier.requireConfig": true,
   "vim.easymotion": true,
   "vim.easymotionMarkerFontFamily": "Fira Code",
   "vim.easymotionMarkerYOffset": -7,
@@ -873,7 +913,7 @@
   "vim.debug.loggingLevelForConsole": "debug",
   "terminal.external.osxExec": "iTerm2.app",
   "terminal.integrated.splitCwd": "workspaceRoot",
-  "editor.cursorSurroundingLines": 4,
+  "editor.cursorSurroundingLines": 2,
   "githubPullRequests.showInSCM": true,
   "files.trimFinalNewlines": true,
   "files.trimTrailingWhitespace": true,
@@ -885,8 +925,21 @@
   "peacock.showColorInStatusBar": false,
   "peacock.affectStatusBar": false,
   "peacock.affectActivityBar": false,
-  "go.useLanguageServer": true,
   "[dockerfile]": {
     "editor.defaultFormatter": "ms-azuretools.vscode-docker"
-  }
+  },
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "eslint.lintTask.enable": true,
+  "ginkgolens.showCommand": true,
+  "go.autocompleteUnimportedPackages": true,
+  "go.useLanguageServer": true,
+  "yaml.format.singleQuote": true,
+  "todo-tree.highlights.enabled": true,
+  "vsicons.dontShowNewVersionMessage": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+  "rust-client.enableMultiProjectSetup": true
 }

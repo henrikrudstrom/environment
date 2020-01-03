@@ -27,5 +27,15 @@
 			"    }]",
 			"}"
 		]
+	},
+	"payload": {
+		"prefix": "pay",
+		"body": [
+			"{",
+			"  name:\"$1Payload\",",
+			"  filename:\"$2.json\",",
+			"  typ:&$1Payload{},",
+			"},"
+		]
 	}
 }

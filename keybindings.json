@@ -627,5 +627,13 @@
     {
         "key": "cmd+w j",
         "command": "io.orta.jest.show-channel"
+    },
+    {
+        "key": "cmd+e cmd+u",
+        "command": "git.stageSelectedRanges"
+    },
+    {
+        "key": "cmd+u cmd+e",
+        "command": "git.unstageSelectedRanges"
     }
 ]
