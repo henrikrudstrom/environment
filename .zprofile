@@ -9,3 +9,5 @@ export PATH=$PATH:$GOROOT/bin
 
 eval "$(rbenv init -)"
 source "/Users/henrik.rudstrom/dev/amedia/tools/init.zsh"
+
+export PATH="$HOME/.cargo/bin:$PATH"
