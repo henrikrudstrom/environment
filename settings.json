@@ -1,4 +1,5 @@
 {
+  "editor.semanticHighlighting.enabled": true,
   "gitlens.views.repositories.location": "scm",
   "gitlens.views.fileHistory.location": "explorer",
   "gitlens.views.lineHistory.location": "explorer",
@@ -10,7 +11,7 @@
   "java.configuration.checkProjectSettingsExclusions": false,
   "workbench.tree.indent": 24,
   "[typescript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
   },
   "[json]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
@@ -30,7 +31,6 @@
       "source.organizeImports": true
     }
   },
-  "go.coverOnSave": true,
   "go.coverageDecorator": {
     "type": "gutter",
     "coveredHighlightColor": "rgba(64,128,128,0.5)",
@@ -40,9 +40,19 @@
   },
   "go.coverOnSingleTest": true,
   "editor.formatOnSave": true,
+  "ginkgolens.showCommand": true,
+  "go.autocompleteUnimportedPackages": true,
+  "go.useLanguageServer": true,
+  "go.coverOnSave": true,
+  "go.testFlags": [
+    "-v",
+    "-ginkgo.noColor",
+  ],
   "go.testEnvVars": {
-    "LOG_LEVEL": "DEBUG"
+    "LOG_LEVEL": "DEBUG",
+    "GINKGO_EDITOR_INTEGRATION": "ignore",
   },
+  "go.coverOnSingleTestFile": true,
   "mocha.files.glob": "build/test/**/*.js",
   "mocha.showErrorPopup": false,
   "[css]": {
@@ -884,7 +894,7 @@
   "editor.fontFamily": "Fira Code",
   "editor.fontLigatures": true,
   "editor.fontSize": 13,
-  "workbench.colorTheme": "Horizon",
+  "workbench.colorTheme": "SynthWave '84",
   "vim.camelCaseMotion.enable": true,
   "editor.minimap.enabled": false,
   "todo-tree.showInExplorer": false,
@@ -932,14 +942,45 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "eslint.lintTask.enable": true,
-  "ginkgolens.showCommand": true,
-  "go.autocompleteUnimportedPackages": true,
-  "go.useLanguageServer": true,
-  "yaml.format.singleQuote": true,
   "todo-tree.highlights.enabled": true,
   "vsicons.dontShowNewVersionMessage": true,
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": true
   },
-  "rust-client.enableMultiProjectSetup": true
+  "rust-client.enableMultiProjectSetup": true,
+  "terraform.indexing": {
+    "enabled": false,
+    "liveIndexing": false,
+    "delay": 500,
+    "exclude": [
+      ".terraform/**/*",
+      "**/.terraform/**/*"
+    ]
+  },
+  "terraform.languageServer": {
+    "enabled": true,
+    "args": []
+  },
+  "yaml.schemas": {
+    "/Users/henrik.rudstrom/Dev/amedia/thewho/static/schema/whoami.v1.schema.json": "whoami.yaml",
+  },
+  "todo-tree.tree.showScanModeButton": false,
+  "cSpell.userWords": [
+    "Nettavisen",
+    "Publikasjons",
+    "Rudstrøm",
+    "Telefon",
+    "amedia",
+    "escenic",
+    "hilsen",
+    "kodeord",
+    "leserinnlegg",
+    "nummer",
+    "nøkkel",
+    "pmap",
+    "skjema",
+    "skriv",
+    "uuidv"
+  ],
+  "cSpell.allowCompoundWords": true,
 }
