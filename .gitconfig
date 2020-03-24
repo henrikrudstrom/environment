@@ -1,6 +1,8 @@
 [user]
 name = Henrik Rudstrøm
 email = henrik.rudstrom@amedia.no
+[url "ssh://git@github.com/"]
+	insteadOf = https://github.com/
 [core]
 pager = diff-so-fancy | less --tabs=4 -RFX
 ignorecase = false
@@ -34,6 +36,10 @@ whitespace = red reverse
 lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
 lgall = !git lg --all
 lga = !git lgall
+lg5 = !git lg -5
+lg10 = !git lg -10
+lg15 = !git lg -15
+lg20 = !git lg -20
 
 pushf = push --force-with-lease
 
@@ -77,3 +83,7 @@ wip = commit -a -m "wip"
 up = "!f() { git checkout ${1-master} && git pull --rebase && git checkout -; git rebase ${1-master}; }; f"
 
 squash = "!f(){ git reset --soft HEAD~${1} && git commit --edit -m\"$(git log --format=%B --reverse HEAD..HEAD@{1})\"; };f"
+
+movebranch = branch -f  
+fixup = ci --fixup
+autosquash = rebase -i --autosquash 
