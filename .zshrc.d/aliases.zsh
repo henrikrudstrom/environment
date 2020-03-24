@@ -35,3 +35,5 @@ alias ....='cd ../../../'
 alias .....='cd ../../../../'
 
 alias aliase='vim ~/Dev/env/environment/.zshrc.d/aliases.zsh'
+
+alias k=kubectl
