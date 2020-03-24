@@ -1,6 +1,10 @@
 // Place your key bindings in this file to override the defaultsauto[]
 [
     {
+        "key": "cmd+w cmd+p",
+        "command": "workbench.action.output.toggleOutput"
+    },
+    {
         "key": "cmd+w cmd+o",
         "command": "workbench.action.closeOtherEditors"
     },
@@ -635,5 +639,15 @@
     {
         "key": "cmd+u cmd+e",
         "command": "git.unstageSelectedRanges"
+    },
+    {
+        "key": "cmd+e cmd+f",
+        "command": "togglePeekWidgetFocus",
+        "when": "inReferenceSearchEditor || referenceSearchVisible"
+    },
+    {
+        "key": "cmd+k f2",
+        "command": "-togglePeekWidgetFocus",
+        "when": "inReferenceSearchEditor || referenceSearchVisible"
     }
 ]
