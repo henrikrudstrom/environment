@@ -1,5 +1,5 @@
 # Path to your oh-my-zsh installation.
-export ZSH="/Users/henrik.rudstrom/.oh-my-zsh"
+export ZSH="/Users/henrikrudstrom/.oh-my-zsh"
 fpath=(/usr/local/share/zsh-completions $fpath)
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -7,7 +7,7 @@ fpath=(/usr/local/share/zsh-completions $fpath)
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 ZSH_THEME="agnoster"
 
-DEFAULT_USER="henrik.rudstrom"
+DEFAULT_USER="henrikrudstrom"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load

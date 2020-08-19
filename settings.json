@@ -835,7 +835,7 @@
       ]
     },
   ],
-  "workbench.iconTheme": "material-icon-theme",
+  "workbench.iconTheme": "vscode-icons",
   "peacock.favoriteColors": [
     {
       "name": "Angular Red",
@@ -894,7 +894,7 @@
   "editor.fontFamily": "Fira Code",
   "editor.fontLigatures": true,
   "editor.fontSize": 13,
-  "workbench.colorTheme": "SynthWave '84",
+  "workbench.colorTheme": "Monokai Dimmed",
   "vim.camelCaseMotion.enable": true,
   "editor.minimap.enabled": false,
   "todo-tree.showInExplorer": false,
