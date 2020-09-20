@@ -16,12 +16,15 @@ code --install-extension eamodio.gitlens
 code --install-extension EditorConfig.EditorConfig
 code --install-extension eg2.vscode-npm-script
 code --install-extension emilast.LogFileHighlighter
+code --install-extension Equinusocio.vsc-community-material-theme
 code --install-extension Equinusocio.vsc-material-theme
+code --install-extension equinusocio.vsc-material-theme-icons
 code --install-extension esbenp.prettier-vscode
 code --install-extension foxundermoon.shell-format
 code --install-extension gerane.Theme-FlatlandMonokai
 code --install-extension ginfuru.ginfuru-better-solarized-dark-theme
 code --install-extension GitHub.vscode-pull-request-github
+code --install-extension golang.go
 code --install-extension Gruntfuggly.todo-tree
 code --install-extension hoovercj.ruby-linter
 code --install-extension humao.rest-client
@@ -34,7 +37,6 @@ code --install-extension mikestead.dotenv
 code --install-extension monokai.theme-monokai-pro-vscode
 code --install-extension ms-azuretools.vscode-docker
 code --install-extension ms-vscode.cpptools
-code --install-extension ms-vscode.Go
 code --install-extension ms-vscode.vscode-typescript-tslint-plugin
 code --install-extension msyrus.go-doc
 code --install-extension Pivotal.vscode-spring-boot
@@ -57,6 +59,7 @@ code --install-extension vscjava.vscode-spring-boot-dashboard
 code --install-extension vscode-icons-team.vscode-icons
 code --install-extension vscodevim.vim
 code --install-extension wesbos.theme-cobalt2
+code --install-extension wingrunr21.vscode-ruby
 code --install-extension wix.vscode-import-cost
 code --install-extension xabikos.JavaScriptSnippets
-code --install-extension zhuangtongfa.Material-theme
+code --install-extension zhuangtongfa.material-theme

@@ -69,6 +69,7 @@ st = status
 cloner = clone --recursive
 cl = clone
 ci = commit
+aci = commit -a
 cia = commit --amend
 ciaa = commit --amend -a --amend -C HEAD
 fetchp = fetch --prune

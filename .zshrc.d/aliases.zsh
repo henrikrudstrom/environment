@@ -34,6 +34,15 @@ alias ...='cd ../../'
 alias ....='cd ../../../'
 alias .....='cd ../../../../'
 
-alias aliase='vim ~/Dev/env/environment/.zshrc.d/aliases.zsh'
-
+alias aliase='vim ~/dev/henrikrudstrom/environment/.zshrc.d/aliases.zsh'
+alias reload="source ~/.zshrc"
 alias k=kubectl
+alias ecl=edit-command-line
+
+## tmux aliases
+alias t="tmux"
+alias ta="t a -t"
+alias tls="t ls"
+alias tn="t new -t"
+
+alias clr="clear"

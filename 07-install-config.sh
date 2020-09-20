@@ -4,7 +4,7 @@ link_file() {
         rm -v "$2"
 
     fi
-    ln -h "$1" "$2"
+    ln -s "$(pwd)/$1" "$2"
 }
 
 link_folder() {
@@ -24,5 +24,8 @@ link_file .zprofile ~/.zprofile
 link_file .zshrc ~/.zshrc
 link_folder .zshrc.d ~/
 link_file .gitconfig ~/.gitconfig
+link_file .tmux.conf ~/.tmux.conf
+link_file .vimrc ~/.vimrc
+link_folder .iterm2 ~/
 rm -v ~/.config/karabiner/karabiner.json
 cp -v karabiner.json ~/.config/karabiner/karabiner.json

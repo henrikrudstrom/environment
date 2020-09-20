@@ -11,7 +11,7 @@
   "java.configuration.checkProjectSettingsExclusions": false,
   "workbench.tree.indent": 24,
   "[typescript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[json]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
@@ -44,13 +44,10 @@
   "go.autocompleteUnimportedPackages": true,
   "go.useLanguageServer": true,
   "go.coverOnSave": true,
-  "go.testFlags": [
-    "-v",
-    "-ginkgo.noColor",
-  ],
+  "go.testFlags": ["-v", "-ginkgo.noColor"],
   "go.testEnvVars": {
     "LOG_LEVEL": "DEBUG",
-    "GINKGO_EDITOR_INTEGRATION": "ignore",
+    "GINKGO_EDITOR_INTEGRATION": "ignore"
   },
   "go.coverOnSingleTestFile": true,
   "mocha.files.glob": "build/test/**/*.js",
@@ -64,7 +61,7 @@
     "typescript",
     "typescriptreact"
   ],
-  "terminal.integrated.fontFamily": "Source Code Pro for Powerline",
+  "terminal.integrated.fontFamily": "FiraCode Nerd Font",
   "terminal.integrated.shell.osx": "/bin/zsh",
   "vim.surround": true,
   "vim.leader": "<space>",
@@ -73,366 +70,137 @@
   "vim.highlightedyank.enable": true,
   "vim.visualModeKeyBindings": [
     {
-      "before": [
-        "s",
-        "s"
-      ],
-      "after": [
-        "<leader>",
-        "<leader>",
-        "s"
-      ],
+      "before": ["s", "s"],
+      "after": ["<leader>", "<leader>", "s"]
     },
     {
-      "before": [
-        "s",
-        "f"
-      ],
-      "after": [
-        "<leader>",
-        "<leader>",
-        "f"
-      ],
+      "before": ["s", "f"],
+      "after": ["<leader>", "<leader>", "f"]
     },
     {
-      "before": [
-        "s",
-        "F"
-      ],
-      "after": [
-        "<leader>",
-        "<leader>",
-        "F"
-      ],
+      "before": ["s", "F"],
+      "after": ["<leader>", "<leader>", "F"]
     },
     {
-      "before": [
-        "s",
-        "t"
-      ],
-      "after": [
-        "<leader>",
-        "<leader>",
-        "t"
-      ],
+      "before": ["s", "t"],
+      "after": ["<leader>", "<leader>", "t"]
     },
     {
-      "before": [
-        "s",
-        "T"
-      ],
-      "after": [
-        "<leader>",
-        "<leader>",
-        "T"
-      ],
+      "before": ["s", "T"],
+      "after": ["<leader>", "<leader>", "T"]
     },
     {
-      "before": [
-        "s",
-        "w"
-      ],
-      "after": [
-        "<leader>",
-        "<leader>",
-        "w"
-      ],
+      "before": ["s", "w"],
+      "after": ["<leader>", "<leader>", "w"]
     },
     {
-      "before": [
-        "s",
-        "b"
-      ],
-      "after": [
-        "<leader>",
-        "<leader>",
-        "b"
-      ],
+      "before": ["s", "b"],
+      "after": ["<leader>", "<leader>", "b"]
     },
     {
-      "before": [
-        "s",
-        "l"
-      ],
-      "after": [
-        "<leader>",
-        "<leader>",
-        "l"
-      ],
+      "before": ["s", "l"],
+      "after": ["<leader>", "<leader>", "l"]
     },
     {
-      "before": [
-        "s",
-        "h"
-      ],
-      "after": [
-        "<leader>",
-        "<leader>",
-        "h"
-      ],
+      "before": ["s", "h"],
+      "after": ["<leader>", "<leader>", "h"]
     },
     {
-      "before": [
-        "s",
-        "e"
-      ],
-      "after": [
-        "<leader>",
-        "<leader>",
-        "e"
-      ],
+      "before": ["s", "e"],
+      "after": ["<leader>", "<leader>", "e"]
     },
     {
-      "before": [
-        "s",
-        "g",
-        "e"
-      ],
-      "after": [
-        "<leader>",
-        "<leader>",
-        "g",
-        "e"
-      ],
+      "before": ["s", "g", "e"],
+      "after": ["<leader>", "<leader>", "g", "e"]
     },
     {
-      "before": [
-        "s",
-        "j"
-      ],
-      "after": [
-        "<leader>",
-        "<leader>",
-        "j"
-      ],
+      "before": ["s", "j"],
+      "after": ["<leader>", "<leader>", "j"]
     },
     {
-      "before": [
-        "s",
-        "k"
-      ],
-      "after": [
-        "<leader>",
-        "<leader>",
-        "k"
-      ],
+      "before": ["s", "k"],
+      "after": ["<leader>", "<leader>", "k"]
     },
     {
-      "before": [
-        "s",
-        "/"
-      ],
-      "after": [
-        "<leader>",
-        "<leader>",
-        "/"
-      ],
+      "before": ["s", "/"],
+      "after": ["<leader>", "<leader>", "/"]
     },
     {
-      "before": [
-        "S"
-      ],
-      "after": [
-        "<leader>",
-        "<leader>",
-        "2"
-      ],
+      "before": ["S"],
+      "after": ["<leader>", "<leader>", "2"]
     },
     {
-      "before": [
-        "<leader>",
-        "s"
-      ],
-      "after": [
-        "<leader>",
-        "<leader>",
-        "2"
-      ],
-    },
+      "before": ["<leader>", "s"],
+      "after": ["<leader>", "<leader>", "2"]
+    }
   ],
   "vim.normalModeKeyBindings": [
     {
-      "before": [
-        "s",
-        "s"
-      ],
-      "after": [
-        "<leader>",
-        "<leader>",
-        "s"
-      ],
+      "before": ["s", "s"],
+      "after": ["<leader>", "<leader>", "s"]
     },
     {
-      "before": [
-        "s",
-        "f"
-      ],
-      "after": [
-        "<leader>",
-        "<leader>",
-        "f"
-      ],
+      "before": ["s", "f"],
+      "after": ["<leader>", "<leader>", "f"]
     },
     {
-      "before": [
-        "s",
-        "F"
-      ],
-      "after": [
-        "<leader>",
-        "<leader>",
-        "F"
-      ],
+      "before": ["s", "F"],
+      "after": ["<leader>", "<leader>", "F"]
     },
     {
-      "before": [
-        "s",
-        "t"
-      ],
-      "after": [
-        "<leader>",
-        "<leader>",
-        "t"
-      ],
+      "before": ["s", "t"],
+      "after": ["<leader>", "<leader>", "t"]
     },
     {
-      "before": [
-        "s",
-        "T"
-      ],
-      "after": [
-        "<leader>",
-        "<leader>",
-        "T"
-      ],
+      "before": ["s", "T"],
+      "after": ["<leader>", "<leader>", "T"]
     },
     {
-      "before": [
-        "s",
-        "w"
-      ],
-      "after": [
-        "<leader>",
-        "<leader>",
-        "w"
-      ],
+      "before": ["s", "w"],
+      "after": ["<leader>", "<leader>", "w"]
     },
     {
-      "before": [
-        "s",
-        "b"
-      ],
-      "after": [
-        "<leader>",
-        "<leader>",
-        "b"
-      ],
+      "before": ["s", "b"],
+      "after": ["<leader>", "<leader>", "b"]
     },
     {
-      "before": [
-        "s",
-        "l"
-      ],
-      "after": [
-        "<leader>",
-        "<leader>",
-        "l"
-      ],
+      "before": ["s", "l"],
+      "after": ["<leader>", "<leader>", "l"]
     },
     {
-      "before": [
-        "s",
-        "h"
-      ],
-      "after": [
-        "<leader>",
-        "<leader>",
-        "h"
-      ],
+      "before": ["s", "h"],
+      "after": ["<leader>", "<leader>", "h"]
     },
     {
-      "before": [
-        "s",
-        "e"
-      ],
-      "after": [
-        "<leader>",
-        "<leader>",
-        "e"
-      ],
+      "before": ["s", "e"],
+      "after": ["<leader>", "<leader>", "e"]
     },
     {
-      "before": [
-        "s",
-        "g",
-        "e"
-      ],
-      "after": [
-        "<leader>",
-        "<leader>",
-        "g",
-        "e"
-      ],
+      "before": ["s", "g", "e"],
+      "after": ["<leader>", "<leader>", "g", "e"]
     },
     {
-      "before": [
-        "s",
-        "j"
-      ],
-      "after": [
-        "<leader>",
-        "<leader>",
-        "j"
-      ],
+      "before": ["s", "j"],
+      "after": ["<leader>", "<leader>", "j"]
     },
     {
-      "before": [
-        "s",
-        "k"
-      ],
-      "after": [
-        "<leader>",
-        "<leader>",
-        "k"
-      ],
+      "before": ["s", "k"],
+      "after": ["<leader>", "<leader>", "k"]
     },
     {
-      "before": [
-        "s",
-        "/"
-      ],
-      "after": [
-        "<leader>",
-        "<leader>",
-        "/"
-      ],
+      "before": ["s", "/"],
+      "after": ["<leader>", "<leader>", "/"]
     },
     {
-      "before": [
-        "S"
-      ],
-      "after": [
-        "<leader>",
-        "<leader>",
-        "2"
-      ],
+      "before": ["S"],
+      "after": ["<leader>", "<leader>", "2"]
     },
     {
-      "before": [
-        "<leader>",
-        "s"
-      ],
-      "after": [
-        "<leader>",
-        "<leader>",
-        "2"
-      ],
+      "before": ["<leader>", "s"],
+      "after": ["<leader>", "<leader>", "2"]
     },
     {
-      "before": [
-        "<leader>",
-        "v"
-      ],
+      "before": ["<leader>", "v"],
       "after": [],
       "commands": [
         {
@@ -442,10 +210,7 @@
       ]
     },
     {
-      "before": [
-        "<leader>",
-        "V"
-      ],
+      "before": ["<leader>", "V"],
       "after": [],
       "commands": [
         {
@@ -455,10 +220,7 @@
       ]
     },
     {
-      "before": [
-        "g",
-        "t"
-      ],
+      "before": ["g", "t"],
       "after": [],
       "commands": [
         {
@@ -468,11 +230,7 @@
       ]
     },
     {
-      "before": [
-        "<leader>",
-        "w",
-        "m"
-      ],
+      "before": ["<leader>", "w", "m"],
       "after": [],
       "commands": [
         {
@@ -482,9 +240,7 @@
       ]
     },
     {
-      "before": [
-        "u"
-      ],
+      "before": ["u"],
       "after": [],
       "commands": [
         {
@@ -494,9 +250,7 @@
       ]
     },
     {
-      "before": [
-        "<C-o>"
-      ],
+      "before": ["<C-o>"],
       "after": [],
       "commands": [
         {
@@ -509,331 +263,195 @@
   "vim.visualModeKeyBindingsNonRecursive": [
     // delete without overwriting clipboard
     {
-      "before": [
-        "d"
-      ],
-      "after": [
-        "\"",
-        "_",
-        "d"
-      ],
+      "before": ["d"],
+      "after": ["\"", "_", "d"]
     },
     {
-      "before": [
-        "x"
-      ],
-      "after": [
-        "\"",
-        "_",
-        "x"
-      ],
+      "before": ["x"],
+      "after": ["\"", "_", "x"]
     },
     {
-      "before": [
-        "c"
-      ],
-      "after": [
-        "\"",
-        "_",
-        "c"
-      ],
+      "before": ["c"],
+      "after": ["\"", "_", "c"]
     },
     {
-      "before": [
-        "p"
-      ],
-      "after": [
-        "\"",
-        "_",
-        "d",
-        "P"
-      ],
+      "before": ["p"],
+      "after": ["\"", "_", "d", "P"]
     },
     {
-      "before": [
-        "<leader>",
-        "d"
-      ],
-      "after": [
-        "d"
-      ],
+      "before": ["<leader>", "d"],
+      "after": ["d"]
     },
     {
-      "before": [
-        "<leader>",
-        "x"
-      ],
-      "after": [
-        "x"
-      ],
+      "before": ["<leader>", "x"],
+      "after": ["x"]
     },
     {
-      "before": [
-        "<leader>",
-        "c"
-      ],
-      "after": [
-        "c"
-      ],
+      "before": ["<leader>", "c"],
+      "after": ["c"]
     },
     {
-      "before": [
-        "<leader>",
-        "p"
-      ],
-      "after": [
-        "p"
-      ],
+      "before": ["<leader>", "p"],
+      "after": ["p"]
     },
     {
-      "before": [
-        ">"
-      ],
-      "commands": [
-        "editor.action.indentLines"
-      ]
+      "before": [">"],
+      "commands": ["editor.action.indentLines"]
     },
     {
-      "before": [
-        "<"
-      ],
-      "commands": [
-        "editor.action.outdentLines"
-      ]
-    },
+      "before": ["<"],
+      "commands": ["editor.action.outdentLines"]
+    }
   ],
   "vim.normalModeKeyBindingsNonRecursive": [
     {
-      "before": [
-        "<leader>",
-        "m",
-        "m"
-      ],
+      "before": ["<leader>", "m", "m"],
       "after": [],
       "commands": [
         {
           "command": "bookmarks.toggle",
-          "args": [],
+          "args": []
         }
       ]
     },
     {
-      "before": [
-        "<leader>",
-        "m",
-        "n"
-      ],
+      "before": ["<leader>", "m", "n"],
       "after": [],
       "commands": [
         {
           "command": "bookmarks.jumpToNext",
-          "args": [],
+          "args": []
         }
       ]
     },
     {
-      "before": [
-        "<leader>",
-        "m",
-        "p"
-      ],
+      "before": ["<leader>", "m", "p"],
       "after": [],
       "commands": [
         {
           "command": "bookmarks.jumpToPrevious",
-          "args": [],
+          "args": []
         }
       ]
     },
     {
-      "before": [
-        "<leader>",
-        "m",
-        "l"
-      ],
+      "before": ["<leader>", "m", "l"],
       "after": [],
       "commands": [
         {
           "command": "bookmarks.list",
-          "args": [],
+          "args": []
         }
       ]
     },
     {
-      "before": [
-        "<leader>",
-        "m",
-        "L"
-      ],
+      "before": ["<leader>", "m", "L"],
       "after": [],
       "commands": [
         {
           "command": "bookmarks.listFromAllFiles",
-          "args": [],
+          "args": []
         }
       ]
     },
     {
-      "before": [
-        "<leader>",
-        "m",
-        "c"
-      ],
+      "before": ["<leader>", "m", "c"],
       "after": [],
       "commands": [
         {
           "command": "bookmarks.clear",
-          "args": [],
+          "args": []
         }
       ]
     },
     {
-      "before": [
-        "<leader>",
-        "m",
-        "C"
-      ],
+      "before": ["<leader>", "m", "C"],
       "after": [],
       "commands": [
         {
           "command": "bookmarks.clearFromAllFiles",
-          "args": [],
+          "args": []
         }
       ]
     },
     // overwrite vim.marks with bookmarks
     {
-      "before": [
-        "m"
-      ],
+      "before": ["m"],
       "after": [],
       "commands": [
         {
           "command": "bookmarks.toggleLabeled",
-          "args": [],
+          "args": []
         }
-      ],
+      ]
     },
     {
-      "before": [
-        "'"
-      ],
+      "before": ["'"],
       "after": [],
       "commands": [
         {
           "command": "bookmarks.list",
-          "args": [],
+          "args": []
         }
       ]
     },
     {
-      "before": [
-        "`"
-      ],
+      "before": ["`"],
       "after": [],
       "commands": [
         {
           "command": "bookmarks.listFromAllFiles",
-          "args": [],
+          "args": []
         }
       ]
     },
     {
-      "before": [
-        "<leader>",
-        "w"
-      ],
+      "before": ["<leader>", "w"],
       "after": [],
       "commands": [
         {
           "command": "workbench.action.files.save",
-          "args": [],
+          "args": []
         }
       ]
     },
     // delete without overwriting clipboard
     {
-      "before": [
-        "d"
-      ],
-      "after": [
-        "\"",
-        "_",
-        "d"
-      ],
+      "before": ["d"],
+      "after": ["\"", "_", "d"]
     },
     {
-      "before": [
-        "x"
-      ],
-      "after": [
-        "\"",
-        "_",
-        "x"
-      ],
+      "before": ["x"],
+      "after": ["\"", "_", "x"]
     },
     {
-      "before": [
-        "c"
-      ],
-      "after": [
-        "\"",
-        "_",
-        "c"
-      ],
+      "before": ["c"],
+      "after": ["\"", "_", "c"]
     },
     {
-      "before": [
-        "<leader>",
-        "d"
-      ],
-      "after": [
-        "d"
-      ],
+      "before": ["<leader>", "d"],
+      "after": ["d"]
     },
     {
-      "before": [
-        "<leader>",
-        "x"
-      ],
-      "after": [
-        "x"
-      ],
+      "before": ["<leader>", "x"],
+      "after": ["x"]
     },
     {
-      "before": [
-        "<leader>",
-        "c"
-      ],
-      "after": [
-        "c"
-      ],
+      "before": ["<leader>", "c"],
+      "after": ["c"]
     },
     {
-      "before": [
-        "<leader>",
-        "p"
-      ],
-      "after": [
-        "p"
-      ],
+      "before": ["<leader>", "p"],
+      "after": ["p"]
     },
     {
-      "before": [
-        ">"
-      ],
-      "commands": [
-        "editor.action.indentLines"
-      ]
+      "before": [">"],
+      "commands": ["editor.action.indentLines"]
     },
     {
-      "before": [
-        "<"
-      ],
-      "commands": [
-        "editor.action.outdentLines"
-      ]
-    },
+      "before": ["<"],
+      "commands": ["editor.action.outdentLines"]
+    }
   ],
   "workbench.iconTheme": "vscode-icons",
   "peacock.favoriteColors": [
@@ -894,7 +512,7 @@
   "editor.fontFamily": "Fira Code",
   "editor.fontLigatures": true,
   "editor.fontSize": 13,
-  "workbench.colorTheme": "Monokai Dimmed",
+  "workbench.colorTheme": "Andromeda Colorizer",
   "vim.camelCaseMotion.enable": true,
   "editor.minimap.enabled": false,
   "todo-tree.showInExplorer": false,
@@ -921,7 +539,7 @@
   "workbench.editor.showTabs": true,
   "eslint.autoFixOnSave": true,
   "vim.debug.loggingLevelForConsole": "debug",
-  "terminal.external.osxExec": "iTerm2.app",
+  "terminal.external.osxExec": "Iterm2.app",
   "terminal.integrated.splitCwd": "workspaceRoot",
   "editor.cursorSurroundingLines": 2,
   "githubPullRequests.showInSCM": true,
@@ -952,17 +570,14 @@
     "enabled": false,
     "liveIndexing": false,
     "delay": 500,
-    "exclude": [
-      ".terraform/**/*",
-      "**/.terraform/**/*"
-    ]
+    "exclude": [".terraform/**/*", "**/.terraform/**/*"]
   },
   "terraform.languageServer": {
     "enabled": true,
     "args": []
   },
   "yaml.schemas": {
-    "/Users/henrik.rudstrom/Dev/amedia/thewho/static/schema/whoami.v1.schema.json": "whoami.yaml",
+    "/Users/henrik.rudstrom/Dev/amedia/thewho/static/schema/whoami.v1.schema.json": "whoami.yaml"
   },
   "todo-tree.tree.showScanModeButton": false,
   "cSpell.userWords": [
@@ -983,4 +598,11 @@
     "uuidv"
   ],
   "cSpell.allowCompoundWords": true,
+  "terminal.integrated.fontWeightBold": "500",
+  "search.quickOpen.history.filterSortOrder": "recency",
+  "workbench.list.automaticKeyboardNavigation": false,
+  "vim.scroll": 5,
+  "terminal.integrated.macOptionClickForcesSelection": true,
+  "terminal.external.linuxExec": "xterm-kitty",
+  "terminal.explorerKind": "external"
 }
