@@ -19,6 +19,8 @@ hs.hotkey.bind(hyper, "s", open.application("Slack"))
 hs.hotkey.bind(hyper, "f", open.application("Finder"))
 hs.hotkey.bind(hyper, "r", open.application("Trello"))
 hs.hotkey.bind(hyper, "p", open.application("Pocket"))
+hs.hotkey.bind(hyper, "g", open.application("Gmail Desktop"))
+hs.hotkey.bind(hyper, "i", open.application("Todoist"))
 hs.hotkey.bind(hyper, ",", function() hs.notify.show("hello", "close me", "this is just a test") end)
 
 hs.spoons.use("FnMate", { config = {

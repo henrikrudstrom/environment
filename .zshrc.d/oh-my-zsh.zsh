@@ -103,3 +103,7 @@ if [ -f '/Users/henrik.rudstrom/google-cloud-sdk/path.zsh.inc' ]; then . '/Users
 
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/henrik.rudstrom/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/henrik.rudstrom/google-cloud-sdk/completion.zsh.inc'; fi
+
+[ -s "$NVM_DIR/bash_completion" ] && . "$NVM_DIR/bash_completion" # This loads nvm bash_completion
+
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=59'

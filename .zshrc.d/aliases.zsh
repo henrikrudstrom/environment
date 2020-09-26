@@ -46,3 +46,10 @@ alias tls="t ls"
 alias tn="t new -t"
 
 alias clr="clear"
+
+
+## Kubernetes
+alias kgp="k get pods"
+alias kl="k logs -f"
+
+

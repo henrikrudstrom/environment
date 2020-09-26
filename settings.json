@@ -62,7 +62,7 @@
     "typescriptreact"
   ],
   "terminal.integrated.fontFamily": "FiraCode Nerd Font",
-  "terminal.integrated.shell.osx": "/bin/zsh",
+  "terminal.integrated.shell.osx": "/Users/henrikrudstrom/bin/vscode-shell.sh",
   "vim.surround": true,
   "vim.leader": "<space>",
   "vim.sneak": true,
@@ -512,7 +512,7 @@
   "editor.fontFamily": "Fira Code",
   "editor.fontLigatures": true,
   "editor.fontSize": 13,
-  "workbench.colorTheme": "Andromeda Colorizer",
+  "workbench.colorTheme": "Ayu Dark Bordered",
   "vim.camelCaseMotion.enable": true,
   "editor.minimap.enabled": false,
   "todo-tree.showInExplorer": false,
@@ -603,6 +603,7 @@
   "workbench.list.automaticKeyboardNavigation": false,
   "vim.scroll": 5,
   "terminal.integrated.macOptionClickForcesSelection": true,
-  "terminal.external.linuxExec": "xterm-kitty",
-  "terminal.explorerKind": "external"
+  "[Log]": {
+    "editor.wordWrap": "on"
+  }
 }
