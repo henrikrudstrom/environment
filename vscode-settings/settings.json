@@ -62,7 +62,7 @@
     "typescriptreact"
   ],
   "terminal.integrated.fontFamily": "FiraCode Nerd Font",
-  "terminal.integrated.shell.osx": "/Users/henrikrudstrom/bin/vscode-shell.sh",
+  // "terminal.integrated.shell.osx": "/Users/henrikrudstrom/bin/vscode-shell.sh",
   "vim.surround": true,
   "vim.leader": "<space>",
   "vim.sneak": true,
@@ -602,8 +602,8 @@
   "search.quickOpen.history.filterSortOrder": "recency",
   "workbench.list.automaticKeyboardNavigation": false,
   "vim.scroll": 5,
-  "terminal.integrated.macOptionClickForcesSelection": true,
   "[Log]": {
     "editor.wordWrap": "on"
-  }
+  },
+  "terminal.integrated.macOptionClickForcesSelection": true
 }
