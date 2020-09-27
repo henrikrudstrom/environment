@@ -22,10 +22,13 @@ zinit light-mode for \
 
 ### End of Zinit's installer chunk
 
-zinit ice wait  atload'FAST_HIGHLIGHT[chroma-man]='
+zinit ice wait \
+    atload'FAST_HIGHLIGHT[chroma-man]='
 zinit light zdharma/fast-syntax-highlighting
 
-zinit ice wait lucid atload'_zsh_autosuggest_start'
+zinit ice wait lucid \
+    atload'_zsh_autosuggest_start'\
+    atload'ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=59"'
 zinit light zsh-users/zsh-autosuggestions
 zinit ice wait blockf
 zinit light zsh-users/zsh-completions
@@ -41,12 +44,12 @@ zinit light laggardkernel/zsh-thefuck
 zinit ice trigger-load'!man'
 zinit light ael-code/zsh-colored-man-pages
 
-export ZSHZ_UNCOMMON=1
-zinit ice wait
-zinit load agkozak/zsh-z
-
-zinit ice wait pick'fz.sh' atload'ZSH_AUTOSUGGEST_CLEAR_WIDGETS+=(autopair-insert __fz_zsh_completion)'
+zinit ice wait pick'fz.sh'\
+    atload'ZSH_AUTOSUGGEST_CLEAR_WIDGETS+=(autopair-insert __fz_zsh_completion)'
 zinit light changyuheng/fz
+
+zinit ice wait pick'z.sh'
+zinit light rupa/z
 
 zinit ice wait from'gh-r' as'program'
 zinit light sei40kr/fast-alias-tips-bin
@@ -63,21 +66,10 @@ zinit light-mode lucid wait has"kubectl" for \
 
 DEFAULT_USER="henrikrudstrom"
 
-ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=59'
-
-source "$(brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc"
-source "$(brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc"
-
-
 bindkey '^X' history-incremental-search-forward
 
-export GOPRIVATE=github.com/amedia
 export ITERM_ENABLE_SHELL_INTEGRATION_WITH_TMUX=1
 export EDITOR=vim
-
-ZSH_DISABLE_COMPFIX=true
-source ~/.zshrc.d/aliases.zsh
-
 
 export STARSHIP_CONFIG=~/.starship
 eval "$(starship init zsh)"
