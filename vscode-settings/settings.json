@@ -62,7 +62,7 @@
     "typescriptreact"
   ],
   "terminal.integrated.fontFamily": "FiraCode Nerd Font",
-  // "terminal.integrated.shell.osx": "/Users/henrikrudstrom/bin/vscode-shell.sh",
+  "terminal.integrated.shell.osx": "/Users/henrikrudstrom/bin/tmux-here",
   "vim.surround": true,
   "vim.leader": "<space>",
   "vim.sneak": true,
