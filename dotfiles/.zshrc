@@ -24,10 +24,12 @@ zinit light-mode for \
 
 
 
+zinit ice wait lucid \
+    atload'_zsh_autosuggest_start'\
+    atload'ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=59"'
+zinit light zsh-users/zsh-autosuggestions
 
 # Completions
-zinit ice wait lucid blockf
-zinit light zsh-users/zsh-completions
 zinit ice wait lucid as"completion" blockf
 zinit snippet https://github.com/docker/cli/blob/master/contrib/completion/zsh/_docker
 zinit light-mode lucid wait has"kubectl" for \
@@ -38,10 +40,9 @@ zinit light-mode lucid wait has"kubectl" for \
   run-atpull \
     zdharma/null
 
-zinit ice wait lucid \
-    atload'_zsh_autosuggest_start'\
-    atload'ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=59"'
-zinit light zsh-users/zsh-autosuggestions
+zinit ice wait lucid blockf
+zinit light zsh-users/zsh-completions
+
 
 
 zinit ice wait lucid
