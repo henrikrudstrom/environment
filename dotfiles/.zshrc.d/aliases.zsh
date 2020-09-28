@@ -25,14 +25,7 @@ alias nis='npm install --save'
 alias nisd='npm install --save-dev'
 alias hst='history | grep'
 
-## get rid of command not found ##
 alias cd..='cd ..'
-
-## a quick way to get out of current directory ##
-alias ..='cd ..'
-alias ...='cd ../../'
-alias ....='cd ../../../'
-alias .....='cd ../../../../'
 
 alias aliase='vim ~/dev/henrikrudstrom/environment/.zshrc.d/aliases.zsh'
 alias reload="source ~/.zshrc"

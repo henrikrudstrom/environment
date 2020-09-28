@@ -1,5 +1,25 @@
 
+unsetopt LIST_BEEP
+
+# History environment variables
+HISTFILE=$HOME/.zsh_hist
+HISTSIZE=1100000  # Larger than $SAVEHIST for HIST_EXPIRE_DUPS_FIRST to work
+SAVEHIST=1000000
+
+setopt EXTENDED_HISTORY       # Save time stamps and durations
+setopt HIST_EXPIRE_DUPS_FIRST # Expire duplicates first
+setopt HIST_FIND_NO_DUPS
+setopt SHARE_HISTORY        # Constantly share history between shell instances
+setopt HIST_IGNORE_DUPS     # Do not enter 2 consecutive duplicates into history
+setopt HIST_IGNORE_SPACE    # Ignore command lines with leading spaces
+setopt HIST_VERIFY          # Reload results of history expansion before executing
+setopt INC_APPEND_HISTORY   # Constantly update $HISTFILE
+
+
+setopt INTERACTIVE_COMMENTS # Allow comments in interactive mode
+
 ### Added by Zinit's installer
+
 if [[ ! -f $HOME/.zinit/bin/zinit.zsh ]]; then
     print -P "%F{33}▓▒░ %F{220}Installing %F{33}DHARMA%F{220} Initiative Plugin Manager (%F{33}zdharma/zinit%F{220})…%f"
     command mkdir -p "$HOME/.zinit" && command chmod g-rwX "$HOME/.zinit"
@@ -43,6 +63,7 @@ turbo0 \
     atload'ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=59"'
 zlight zsh-users/zsh-autosuggestions
 
+turbo0; zlight Valodim/zsh-curl-completion
 # zinit ice wait lucid as"completion" blockf
 # zinit snippet https://github.com/docker/cli/blob/master/contrib/completion/zsh/_docker
 # zinit light-mode lucid wait has"kubectl" for \
@@ -57,34 +78,26 @@ zlight zsh-users/zsh-autosuggestions
 # zinit light zsh-users/zsh-completions
 
 
-
-# zinit light-mode lucid wait has"kubectl" for \
-#   id-as"kubectl_completion" \
-#   as"completion" \
-#   atclone"kubectl completion zsh > _kubectl" \
-#   atpull"%atclone" \
-#   run-atpull \
-#     zdharma/null
-
-# zinit ice wait lucid blockf
-# zinit light zsh-users/zsh-completions
-
-source "/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc"
-
-
-
-turbo0; zsnippet "/usr/local/opt/fzf/shell/key-bindings.zsh"
 export FZF_DEFAULT_COMMAND="fd . $HOME"
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 export FZF_ALT_C_COMMAND="fd -t d . $HOME"
+turbo0; zsnippet "/usr/local/opt/fzf/shell/key-bindings.zsh"
 
 turbo0; zlight zdharma/history-search-multi-word
 
 turbo0; zlight laggardkernel/zsh-thefuck
 
-# zinit ice trigger-load'!man'
-# zinit light ael-code/zsh-colored-man-pages
+turbo0 pick'manydots-magic' compile'manydots-magic'
+zlight knu/zsh-manydots-magic
 
+export HISTORY_SUBSTRING_SEARCH_HIGHLIGHT_FOUND="fg=blue,bold,underline"
+turbo0 atload'bindkey "^[[A" history-substring-search-up; bindkey "^[[B" history-substring-search-down'
+zlight zsh-users/zsh-history-substring-search
+
+zinit ice trigger-load'!man'
+zinit light ael-code/zsh-colored-man-pages
+zinit ice trigger-load'!gencomp' pick'zsh-completion-generator.plugin.zsh' atload'zinit creinstall -q "$PWD"'
+zlight RobSis/zsh-completion-generator
 turbo0; zlight rupa/z
 
 turbo0 pick'fz.sh' \
@@ -103,10 +116,12 @@ turbo2 from'gitlab' \
   atload'export PATH="$PATH:$GOPATH/bin"'
 zlight "RiverGlide/zsh-goenv"
 
-# DEFAULT_USER="henrikrudstrom"
+export COMPLETION_WAITING_DOTS=true
+turbo1; zsnippet OMZ::lib/completion.zsh
+source "/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc"
 
 turbo1  atload'FAST_HIGHLIGHT[chroma-man]=' \
-  atload"ZINIT[COMPINIT_OPTS]='-i' zpcompinit"
+  atload"ZINIT[COMPINIT_OPTS]='-i' zicompinit; zicdreplay"
 zinit light zdharma/fast-syntax-highlighting
 
 zlight pikariop/oblique-strategies-zsh
@@ -117,12 +132,7 @@ export EDITOR=vim
 
 source ~/.zshrc.d/aliases.zsh
 
-HISTFILE=$HOME/.zsh_hist
-HISTSIZE=5000000
-SAVEHIST=$HISTSIZE
-setopt INC_APPEND_HISTORY
-setopt HIST_FIND_NO_DUPS
-setopt HIST_IGNORE_ALL_DUPS
+
 
 export STARSHIP_CONFIG=~/.starship
 eval "$(starship init zsh)"
