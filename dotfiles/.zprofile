@@ -8,6 +8,9 @@ export PATH=$PATH:$GOPATH/bin
 export PATH=$PATH:$GOROOT/bin
 export GOPRIVATE=github.com/amedia
 
+export GOENV_ROOT="$HOME/.goenv"
+export PATH="$GOENV_ROOT/bin:$PATH"
+
 export PATH="/usr/local/opt/ruby/bin:$PATH"
 
 source "/Users/henrikrudstrom/dev/amedia/tools/init.zsh"

@@ -8,9 +8,23 @@ if [[ ! -f $HOME/.zinit/bin/zinit.zsh ]]; then
         print -P "%F{160}▓▒░ The clone has failed.%f%b"
 fi
 
+
 source "$HOME/.zinit/bin/zinit.zsh"
 autoload -Uz _zinit
 (( ${+_comps} )) && _comps[zinit]=_zinit
+
+
+#################################################################
+# FUNCTIONS TO MAKE CONFIGURATION LESS VERBOSE
+#
+
+turbo0()   { zinit ice wait"0a" lucid             "${@}"; }
+turbo1()   { zinit ice wait"0b" lucid             "${@}"; }
+turbo2()   { zinit ice wait"0c" lucid             "${@}"; }
+zcommand() { zinit ice wait"0b" lucid as"command" "${@}"; }
+zload()    { zinit load                           "${@}"; }
+zlight()   { zinit light                          "${@}"; }
+zsnippet() { zinit snippet                        "${@}"; }
 
 # Load a few important annexes, without Turbo
 # (this is currently required for annexes)
@@ -24,84 +38,78 @@ zinit light-mode for \
 
 
 
-zinit ice wait lucid \
+turbo0 \
     atload'_zsh_autosuggest_start'\
     atload'ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=59"'
-zinit light zsh-users/zsh-autosuggestions
+zlight zsh-users/zsh-autosuggestions
 
-zinit ice wait lucid as"completion" blockf
-zinit snippet https://github.com/docker/cli/blob/master/contrib/completion/zsh/_docker
-zinit light-mode lucid wait has"kubectl" for \
-  id-as"kubectl_completion" \
-  as"completion" \
-  atclone"kubectl completion zsh > _kubectl" \
-  atpull"%atclone" \
-  run-atpull \
-    zdharma/null
+# zinit ice wait lucid as"completion" blockf
+# zinit snippet https://github.com/docker/cli/blob/master/contrib/completion/zsh/_docker
+# zinit light-mode lucid wait has"kubectl" for \
+#   id-as"kubectl_completion" \
+#   as"completion" \
+#   atclone"kubectl completion zsh > _kubectl" \
+#   atpull"%atclone" \
+#   run-atpull \
+#     zdharma/null
 
-zinit ice wait lucid blockf
-zinit light zsh-users/zsh-completions
+# zinit ice wait lucid blockf
+# zinit light zsh-users/zsh-completions
 
 
 
-zinit light-mode lucid wait has"kubectl" for \
-  id-as"kubectl_completion" \
-  as"completion" \
-  atclone"kubectl completion zsh > _kubectl" \
-  atpull"%atclone" \
-  run-atpull \
-    zdharma/null
+# zinit light-mode lucid wait has"kubectl" for \
+#   id-as"kubectl_completion" \
+#   as"completion" \
+#   atclone"kubectl completion zsh > _kubectl" \
+#   atpull"%atclone" \
+#   run-atpull \
+#     zdharma/null
+
+# zinit ice wait lucid blockf
+# zinit light zsh-users/zsh-completions
 
 source "/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc"
 
-zinit ice wait lucid blockf
-zinit light zsh-users/zsh-completions
 
 
-zinit ice wait lucid
-zinit snippet "/usr/local/opt/fzf/shell/key-bindings.zsh"
+turbo0; zsnippet "/usr/local/opt/fzf/shell/key-bindings.zsh"
 export FZF_DEFAULT_COMMAND="fd . $HOME"
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 export FZF_ALT_C_COMMAND="fd -t d . $HOME"
 
-zinit ice wait lucid
-zinit light zdharma/history-search-multi-word
+turbo0; zlight zdharma/history-search-multi-word
 
-zinit ice wait lucid
-zinit light laggardkernel/zsh-thefuck
+turbo0; zlight laggardkernel/zsh-thefuck
 
-zinit ice trigger-load'!man'
-zinit light ael-code/zsh-colored-man-pages
+# zinit ice trigger-load'!man'
+# zinit light ael-code/zsh-colored-man-pages
 
-zinit ice wait lucid
-zinit light rupa/z
+turbo0; zlight rupa/z
 
-zinit ice wait lucid pick'fz.sh' atload'ZSH_AUTOSUGGEST_CLEAR_WIDGETS+=(autopair-insert __fz_zsh_completion)'
-zinit light changyuheng/fz
+turbo0 pick'fz.sh' \
+atload'ZSH_AUTOSUGGEST_CLEAR_WIDGETS+=(autopair-insert __fz_zsh_completion)'
+zlight changyuheng/fz
 
-zinit ice wait lucid from'gh-r' as'program'
-zinit light sei40kr/fast-alias-tips-bin
-zinit ice wait lucid
-zinit light sei40kr/zsh-fast-alias-tips
+turbo0 from'gh-r' as'program'; zlight sei40kr/fast-alias-tips-bin
+turbo0; zlight sei40kr/zsh-fast-alias-tips
 
-zinit ice wait lucid
-zinit light changyuheng/zsh-interactive-cd
+turbo0; zlight changyuheng/zsh-interactive-cd
 
-zinit ice wait lucid
-zinit light lukechilds/zsh-nvm
+turbo2; zlight lukechilds/zsh-nvm
+turbo2; zsnippet OMZ::plugins/rbenv/rbenv.plugin.zsh
+turbo2 from'gitlab' \
+  atload'export PATH="$GOROOT/bin:$PATH"' \
+  atload'export PATH="$PATH:$GOPATH/bin"'
+zlight "RiverGlide/zsh-goenv"
 
-zinit ice wait lucid
-zinit snippet OMZ::plugins/rbenv/rbenv.plugin.zsh
+# DEFAULT_USER="henrikrudstrom"
 
-
-DEFAULT_USER="henrikrudstrom"
-
-zinit ice wait lucid  atload'FAST_HIGHLIGHT[chroma-man]='
+turbo1  atload'FAST_HIGHLIGHT[chroma-man]=' \
+  atload"ZINIT[COMPINIT_OPTS]='-i' zpcompinit"
 zinit light zdharma/fast-syntax-highlighting
 
-
-
-zinit light brokendisk/dune-quotes
+zlight pikariop/oblique-strategies-zsh
 
 bindkey '^X' history-incremental-search-forward
 export ITERM_ENABLE_SHELL_INTEGRATION_WITH_TMUX=1
@@ -118,3 +126,5 @@ setopt HIST_IGNORE_ALL_DUPS
 
 export STARSHIP_CONFIG=~/.starship
 eval "$(starship init zsh)"
+
+print_oblique

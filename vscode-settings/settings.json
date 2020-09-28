@@ -62,7 +62,7 @@
     "typescriptreact"
   ],
   "terminal.integrated.fontFamily": "FiraCode Nerd Font",
-  "terminal.integrated.shell.osx": "/Users/henrikrudstrom/bin/tmux-here",
+  // "terminal.integrated.shell.osx": "/Users/henrikrudstrom/bin/tmux-gitroot",
   "vim.surround": true,
   "vim.leader": "<space>",
   "vim.sneak": true,
@@ -512,7 +512,7 @@
   "editor.fontFamily": "Fira Code",
   "editor.fontLigatures": true,
   "editor.fontSize": 13,
-  "workbench.colorTheme": "Ayu Dark Bordered",
+  "workbench.colorTheme": "Andromeda Colorizer",
   "vim.camelCaseMotion.enable": true,
   "editor.minimap.enabled": false,
   "todo-tree.showInExplorer": false,

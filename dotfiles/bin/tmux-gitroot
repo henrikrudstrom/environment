@@ -1,0 +1,4 @@
+#!/bin/zsh
+GITROOT="$(git rev-parse --show-toplevel)"
+SESSION="${GITROOT##*/}-$(echo $GITROOT | sha1sum | cut -c1-7)"
+tmux attach-session -d -t $SESSION || tmux new-session -s $SESSION
