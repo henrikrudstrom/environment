@@ -100,10 +100,6 @@ zinit ice trigger-load'!gencomp' pick'zsh-completion-generator.plugin.zsh' atloa
 zlight RobSis/zsh-completion-generator
 turbo0; zlight rupa/z
 
-turbo0 pick'fz.sh' \
-atload'ZSH_AUTOSUGGEST_CLEAR_WIDGETS+=(autopair-insert __fz_zsh_completion)'
-zlight changyuheng/fz
-
 turbo0 from'gh-r' as'program'; zlight sei40kr/fast-alias-tips-bin
 turbo0; zlight sei40kr/zsh-fast-alias-tips
 
@@ -120,6 +116,10 @@ export COMPLETION_WAITING_DOTS=true
 turbo1; zsnippet OMZ::lib/completion.zsh
 source "/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc"
 
+turbo1 pick'fz.sh' \
+atload'ZSH_AUTOSUGGEST_CLEAR_WIDGETS+=(autopair-insert __fz_zsh_completion)'
+zlight changyuheng/fz
+
 turbo1  atload'FAST_HIGHLIGHT[chroma-man]=' \
   atload"ZINIT[COMPINIT_OPTS]='-i' zicompinit; zicdreplay"
 zinit light zdharma/fast-syntax-highlighting
@@ -131,8 +131,6 @@ export ITERM_ENABLE_SHELL_INTEGRATION_WITH_TMUX=1
 export EDITOR=vim
 
 source ~/.zshrc.d/aliases.zsh
-
-
 
 export STARSHIP_CONFIG=~/.starship
 eval "$(starship init zsh)"

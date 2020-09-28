@@ -37,6 +37,8 @@ alias t="tmux"
 alias ta="t a -t"
 alias tls="t ls"
 alias tn="t new -t"
+alias there="tmux-here"
+alias tgit="tmux-gitroot"
 
 alias clr="clear"
 
