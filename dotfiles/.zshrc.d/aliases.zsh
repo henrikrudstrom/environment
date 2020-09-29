@@ -2,6 +2,7 @@
 alias cp='cp -rv'
 
 # List contents with colors for file types, (A)lmost all hidden files (without . and ..), in (C)olumns, with class indicators (F)
+
 alias ls="exa --color=always -Fa"
 alias ll="exa --color=always -Fla"
 alias llfu='exa -bghlSa --git'
@@ -29,7 +30,6 @@ alias cd..='cd ..'
 
 alias aliase='vim ~/dev/henrikrudstrom/environment/.zshrc.d/aliases.zsh'
 alias reload="source ~/.zshrc"
-alias k=kubectl
 alias ecl=edit-command-line
 
 ## tmux aliases
@@ -43,5 +43,6 @@ alias tgit="tmux-gitroot"
 alias clr="clear"
 
 ## Kubernetes
+alias k=kubectl
 alias kgp="k get pods"
 alias kl="k logs -f"
