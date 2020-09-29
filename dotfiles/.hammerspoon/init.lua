@@ -6,11 +6,28 @@ hs.loadSpoon("SpoonInstall")
 spoon.SpoonInstall.use_syncinstall = true
 local Install = spoon.SpoonInstall
 
-
+local meh = {"ctrl", "alt", "shift"}
 local hyper = {"shift", "ctrl", "alt", "cmd"}
-
+print("loading here")
 hs.hotkey.bind(hyper, "f1", "hammerspoon reloaded", nil, hs.reload)
 hs.hotkey.bind(hyper, "f2", nil, nil, hs.toggleConsole)
+hs.hotkey.bind(hyper, "5", function()
+  local screen  = hs.screen.primaryScreen()
+  local normalMode = "3440x1440@1x"
+  local scaledMode = "2048x858@1x"
+  local currentMode = screen:currentMode().desc
+  local targetMode = scaledMode
+  if currentMode == scaledMode then
+    targetMode = normalMode
+  end
+  for k, v in pairs(screen:availableModes()) do
+    if k == targetMode then
+      print("target")
+      print(k)
+      screen:setMode(v.w, v.h, v.scale)
+    end
+  end
+end)
 -- hs.hotkey.bind(hyper, "f4", toggleKeyboard.setVanilla)
 hs.hotkey.bind(hyper, "c", open.application("Google Chrome"))
 hs.hotkey.bind(hyper, "o", open.application("Visual Studio Code"))
