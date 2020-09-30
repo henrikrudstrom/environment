@@ -21,9 +21,17 @@ setopt AUTO_PUSHD           # Push the current directory visited on the stack.
 setopt PUSHD_IGNORE_DUPS    # Do not store duplicates in the stack.
 setopt PUSHD_SILENT
 
+export ITERM_ENABLE_SHELL_INTEGRATION_WITH_TMUX=1
+export EDITOR=vim
+
+source $HOME/.zshrc.d/aliases.zsh
+
+# VI mode
 # bindkey -v
 # export KEYTIMEOUT=1
 # source $HOME/.zshrc.d/vi-cursor-mode.zsh
+
+
 ### Added by Zinit's installer
 
 if [[ ! -f $HOME/.zinit/bin/zinit.zsh ]]; then
@@ -63,15 +71,15 @@ zinit light-mode for \
 ### End of Zinit's installer chunk
 
 
-
+# Autosuggestions
 turbo0 \
     atload'_zsh_autosuggest_start'\
     atload'ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=59"'
 zlight zsh-users/zsh-autosuggestions
 
+
+# Completions
 turbo0; zlight Valodim/zsh-curl-completion
-# zinit ice wait lucid as"completion" blockf
-# zinit snippet https://github.com/docker/cli/blob/master/contrib/completion/zsh/_docker
 zinit light-mode lucid wait has"kubectl" for \
   id-as"kubectl_completion" \
   as"completion" \
@@ -83,63 +91,79 @@ zinit light-mode lucid wait has"kubectl" for \
 zinit ice wait lucid blockf
 zinit light zsh-users/zsh-completions
 
+zinit ice wait lucid as"completion" blockf
+zinit snippet https://github.com/docker/cli/blob/master/contrib/completion/zsh/_docker
 
+turbo0; zsnippet .zshrc.d/completion-options.zsh
+
+source "/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc"
+
+turbo1 as'completion'; zsnippet OMZ::plugins/terraform/_terraform
+
+
+# All things Z
 export FZF_DEFAULT_COMMAND="fd . $HOME"
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 export FZF_ALT_C_COMMAND="fd -t d . $HOME"
 turbo0; zsnippet "/usr/local/opt/fzf/shell/key-bindings.zsh"
 
-turbo0; zlight zdharma/history-search-multi-word
-
-turbo0; zlight laggardkernel/zsh-thefuck
-
-turbo0 pick'manydots-magic' compile'manydots-magic'
-zlight knu/zsh-manydots-magic
-
-export HISTORY_SUBSTRING_SEARCH_HIGHLIGHT_FOUND="fg=blue,bold,underline"
-turbo0 atload'bindkey "^[[A" history-substring-search-up; bindkey "^[[B" history-substring-search-down'
-zlight zsh-users/zsh-history-substring-search
-
-zinit ice trigger-load'!man'
-zinit light ael-code/zsh-colored-man-pages
-zinit ice trigger-load'!gencomp' pick'zsh-completion-generator.plugin.zsh' atload'zinit creinstall -q "$PWD"'
-zlight RobSis/zsh-completion-generator
 turbo0; zlight rupa/z
-
-turbo0 from'gh-r' as'program'; zlight sei40kr/fast-alias-tips-bin
-turbo0; zlight sei40kr/zsh-fast-alias-tips
-
-turbo0; zlight changyuheng/zsh-interactive-cd
-
-turbo2; zlight lukechilds/zsh-nvm
-turbo2; zsnippet OMZ::plugins/rbenv/rbenv.plugin.zsh
-turbo2 from'gitlab' \
-  atload'export PATH="$GOROOT/bin:$PATH"' \
-  atload'export PATH="$PATH:$GOPATH/bin"'
-zlight "RiverGlide/zsh-goenv"
-
-export COMPLETION_WAITING_DOTS=true
-turbo1; zsnippet OMZ::lib/completion.zsh
-# turbo0; zsnippet .zshrc.d/completion-options.zsh
-source "/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc"
 
 turbo1 pick'fz.sh' \
 atload'ZSH_AUTOSUGGEST_CLEAR_WIDGETS+=(autopair-insert __fz_zsh_completion)'
 zlight changyuheng/fz
 
+# History
+turbo0; zlight zdharma/history-search-multi-word
+
+export HISTORY_SUBSTRING_SEARCH_HIGHLIGHT_FOUND="fg=blue,bold,underline"
+turbo0 atload'bindkey "^[[A" history-substring-search-up; bindkey "^[[B" history-substring-search-down'
+zlight zsh-users/zsh-history-substring-search
+
+# aliases
+turbo1; zlight brymck/print-alias
+
+turbo1 from'gh-r' as'program'
+zlight sei40kr/fast-alias-tips-bin
+turbo1 atload'FAST_ALIAS_TIPS_PREFIX="$(tput setaf 4)use alias: $(tput bold)$(tput setaf 7)"'
+zlight sei40kr/zsh-fast-alias-tips
+
+turbo1; zlight webyneter/docker-aliases
+
+# Manydots
+turbo0 pick'manydots-magic' compile'manydots-magic'
+zlight knu/zsh-manydots-magic
+
+# FUCK
+turbo0; zlight laggardkernel/zsh-thefuck
+
+# Trigger loaded
+zinit ice trigger-load'!man'
+zinit light ael-code/zsh-colored-man-pages
+
+zinit ice trigger-load'!gencomp' pick'zsh-completion-generator.plugin.zsh' atload'zinit creinstall -q "$PWD"'
+zlight RobSis/zsh-completion-generator
+
+# nvm, goenv, rbenv
+turbo2; zlight lukechilds/zsh-nvm
+
+turbo2; zsnippet OMZ::plugins/rbenv/rbenv.plugin.zsh
+
+turbo2 from'gitlab' \
+  atload'export PATH="$GOROOT/bin:$PATH"' \
+  atload'export PATH="$PATH:$GOPATH/bin"'
+zlight "RiverGlide/zsh-goenv"
+
+
+# Syntax highlighting
 turbo1  atload'FAST_HIGHLIGHT[chroma-man]=' \
-  atload"ZINIT[COMPINIT_OPTS]='-i' zicompinit; zicdreplay"
-#   atload"_comp_options+=(globdots) # With hidden files"
+  atload"ZINIT[COMPINIT_OPTS]='-i' zicompinit; zicdreplay" \
+  atload"_comp_options+=(globdots)"
 zinit light zdharma/fast-syntax-highlighting
 
-# _comp_options+=(globdots) # With hidden files
 
 zlight pikariop/oblique-strategies-zsh
 
-export ITERM_ENABLE_SHELL_INTEGRATION_WITH_TMUX=1
-export EDITOR=vim
-
-source ~/.zshrc.d/aliases.zsh
 
 export STARSHIP_CONFIG=~/.starship
 eval "$(starship init zsh)"
