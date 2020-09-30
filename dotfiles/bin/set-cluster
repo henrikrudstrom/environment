@@ -1,0 +1,30 @@
+clusterDB="${HOME}/.clusters"
+
+clusterKey=$1
+data=$(yq -j r $clusterDB clusters | jq -c)
+match=$(
+    echo $data |
+        jq --arg clusterKey "$clusterKey" 'keys | .[] | select(. == $clusterKey) | 1'
+)
+
+if [[ ${match} -ne 1 ]]; then
+    echo $data |
+        jq -r --arg clusterKey "$clusterKey" 'keys | .[]'
+    exit
+fi
+
+isgcp=$(echo $data | jq -r --arg clusterKey "$clusterKey" 'select(.[$clusterKey].type == "gcp")| 1')
+if [[ ${isgcp} -ne 1 ]]; then
+    echo "only gcp"
+    exit
+fi
+
+project=$(echo $data | jq -r --arg clusterKey "$clusterKey" '.[$clusterKey].project')
+region=$(echo $data | jq -r --arg clusterKey "$clusterKey" '.[$clusterKey].region')
+clusterName=$(echo $data | jq -r --arg clusterKey "$clusterKey" '.[$clusterKey].cluster.name')
+
+cmd="gcloud config set project ${project}"
+${cmd}
+
+cmd="gcloud container clusters --region=$region get-credentials $clusterName"
+${cmd}

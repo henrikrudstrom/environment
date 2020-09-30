@@ -15,9 +15,15 @@ setopt HIST_IGNORE_SPACE    # Ignore command lines with leading spaces
 setopt HIST_VERIFY          # Reload results of history expansion before executing
 setopt INC_APPEND_HISTORY   # Constantly update $HISTFILE
 
-
 setopt INTERACTIVE_COMMENTS # Allow comments in interactive mode
 
+setopt AUTO_PUSHD           # Push the current directory visited on the stack.
+setopt PUSHD_IGNORE_DUPS    # Do not store duplicates in the stack.
+setopt PUSHD_SILENT
+
+# bindkey -v
+# export KEYTIMEOUT=1
+# source $HOME/.zshrc.d/vi-cursor-mode.zsh
 ### Added by Zinit's installer
 
 if [[ ! -f $HOME/.zinit/bin/zinit.zsh ]]; then
@@ -66,16 +72,16 @@ zlight zsh-users/zsh-autosuggestions
 turbo0; zlight Valodim/zsh-curl-completion
 # zinit ice wait lucid as"completion" blockf
 # zinit snippet https://github.com/docker/cli/blob/master/contrib/completion/zsh/_docker
-# zinit light-mode lucid wait has"kubectl" for \
-#   id-as"kubectl_completion" \
-#   as"completion" \
-#   atclone"kubectl completion zsh > _kubectl" \
-#   atpull"%atclone" \
-#   run-atpull \
-#     zdharma/null
+zinit light-mode lucid wait has"kubectl" for \
+  id-as"kubectl_completion" \
+  as"completion" \
+  atclone"kubectl completion zsh > _kubectl" \
+  atpull"%atclone" \
+  run-atpull \
+    zdharma/null
 
-# zinit ice wait lucid blockf
-# zinit light zsh-users/zsh-completions
+zinit ice wait lucid blockf
+zinit light zsh-users/zsh-completions
 
 
 export FZF_DEFAULT_COMMAND="fd . $HOME"
@@ -114,6 +120,7 @@ zlight "RiverGlide/zsh-goenv"
 
 export COMPLETION_WAITING_DOTS=true
 turbo1; zsnippet OMZ::lib/completion.zsh
+# turbo0; zsnippet .zshrc.d/completion-options.zsh
 source "/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc"
 
 turbo1 pick'fz.sh' \
@@ -122,11 +129,13 @@ zlight changyuheng/fz
 
 turbo1  atload'FAST_HIGHLIGHT[chroma-man]=' \
   atload"ZINIT[COMPINIT_OPTS]='-i' zicompinit; zicdreplay"
+#   atload"_comp_options+=(globdots) # With hidden files"
 zinit light zdharma/fast-syntax-highlighting
+
+# _comp_options+=(globdots) # With hidden files
 
 zlight pikariop/oblique-strategies-zsh
 
-bindkey '^X' history-incremental-search-forward
 export ITERM_ENABLE_SHELL_INTEGRATION_WITH_TMUX=1
 export EDITOR=vim
 
