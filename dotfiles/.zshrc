@@ -120,15 +120,22 @@ export HISTORY_SUBSTRING_SEARCH_HIGHLIGHT_FOUND="fg=blue,bold,underline"
 turbo0 atload'bindkey "^[[A" history-substring-search-up; bindkey "^[[B" history-substring-search-down'
 zlight zsh-users/zsh-history-substring-search
 
-# aliases
+# aliases stuff
 turbo1; zlight brymck/print-alias
 
-turbo1 from'gh-r' as'program'
-zlight sei40kr/fast-alias-tips-bin
-turbo1 atload'FAST_ALIAS_TIPS_PREFIX="$(tput setaf 4)use alias: $(tput bold)$(tput setaf 7)"'
-zlight sei40kr/zsh-fast-alias-tips
+# turbo1 from'gh-r' as'program'
+# zlight sei40kr/fast-alias-tips-bin
+# turbo1 atload'FAST_ALIAS_TIPS_PREFIX="$(tput setaf 4)use alias: $(tput bold)$(tput setaf 7)"'
+# zlight sei40kr/zsh-fast-alias-tips
+
+turbo1 \
+  atload'export YSU_MESSAGE_FORMAT="$(tput setaf 4)Found %alias_type alias for \`%command\`: $(tput setaf 6)$(tput bold)%alias$(tput sgr0)"';
+zlight MichaelAquilina/zsh-you-should-use
 
 turbo1; zlight webyneter/docker-aliases
+
+turbo0 atload'source $HOME/.zshrc.d/abbrev-aliases.zsh';
+zlight momo-lab/zsh-abbrev-alias
 
 # Manydots
 turbo0 pick'manydots-magic' compile'manydots-magic'

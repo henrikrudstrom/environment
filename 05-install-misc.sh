@@ -17,3 +17,6 @@ echo "Installing global node packages"
 npm install -g npkill
 npm install -g speed-test
 npm install -g thrash-cli
+
+echo "Installing rust packages"
+cargo install tealdeer

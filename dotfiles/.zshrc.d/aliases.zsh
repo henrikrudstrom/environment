@@ -55,3 +55,7 @@ alias gp='git push'
 alias gpf='git pushf'
 alias gc='git commit'
 alias gco='git checkout'
+
+alias top='htop'
+alias vi="nvim"
+alias vim="nvim"
