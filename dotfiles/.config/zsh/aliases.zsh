@@ -33,6 +33,7 @@ alias reload="source ~/.zshrc"
 alias ecl=edit-command-line
 
 ## tmux aliases
+alias tmux="tmux -f .config/tmux/tmux.conf"
 alias t="tmux"
 alias ta="t a -t"
 alias tls="t ls"
@@ -48,6 +49,7 @@ alias kgp="k get pods"
 alias kl="k logs -f"
 
 ## git
+# alias git='git -c .config/gitconfig'
 alias g='git'
 alias gs='git status'
 alias ga='git add'

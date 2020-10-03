@@ -28,6 +28,11 @@ if !filereadable(vimplug_exists)
   autocmd VimEnter * PlugInstall
 endif
 
+" Syntax highlight
+" Default highlight is better than polyglot
+let g:polyglot_disabled = ['python']
+let python_highlight_all = 1
+
 " Required:
 call plug#begin(expand('~/.config/nvim/plugged'))
 
@@ -40,7 +45,7 @@ Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-fugitive'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-Plug 'airblade/vim-gitgutter'
+"" Plug 'airblade/vim-gitgutter'
 Plug 'vim-scripts/grep.vim'
 Plug 'vim-scripts/CSApprox'
 Plug 'Raimondi/delimitMate'
@@ -139,7 +144,7 @@ set shiftwidth=4
 set expandtab
 
 "" Map leader to ,
-let mapleader=','
+let mapleader=' '
 
 "" Enable hidden buffers
 set hidden
@@ -559,10 +564,7 @@ let g:jedi#smart_auto_mappings = 0
 " vim-airline
 let g:airline#extensions#virtualenv#enabled = 1
 
-" Syntax highlight
-" Default highlight is better than polyglot
-let g:polyglot_disabled = ['python']
-let python_highlight_all = 1
+
 
 
 " typescript
@@ -617,3 +619,17 @@ else
   let g:airline_symbols.readonly = ''
   let g:airline_symbols.linenr = ''
 endif
+
+set hidden
+let mapleader="<Space>"
+nnoremap <Leader>v :e $MYVIMRC<cr>
+
+" Reloads vimrc after saving but keep cursor position
+if !exists('*ReloadVimrc')
+   fun! ReloadVimrc()
+       let save_cursor = getcurpos()
+       source $MYVIMRC
+       call setpos('.', save_cursor)
+   endfun
+endif
+autocmd! BufWritePost $MYVIMRC call ReloadVimrc()

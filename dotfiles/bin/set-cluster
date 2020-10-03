@@ -1,4 +1,4 @@
-clusterDB="${HOME}/.clusters"
+clusterDB="${HOME}/.config/clusters.yaml"
 
 clusterKey=$1
 data=$(yq -j r $clusterDB clusters | jq -c)

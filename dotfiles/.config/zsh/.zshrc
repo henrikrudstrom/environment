@@ -1,4 +1,3 @@
-
 unsetopt LIST_BEEP
 
 # History environment variables
@@ -24,13 +23,12 @@ setopt PUSHD_SILENT
 export ITERM_ENABLE_SHELL_INTEGRATION_WITH_TMUX=1
 export EDITOR=vim
 
-source $HOME/.zshrc.d/aliases.zsh
-
+source $HOME/.config/zsh/aliases.zsh
+export TIGRC_USER=$HOME/.config/tigrc
 # VI mode
 # bindkey -v
 # export KEYTIMEOUT=1
 # source $HOME/.zshrc.d/vi-cursor-mode.zsh
-
 
 ### Added by Zinit's installer
 
@@ -42,11 +40,9 @@ if [[ ! -f $HOME/.zinit/bin/zinit.zsh ]]; then
         print -P "%F{160}▓▒░ The clone has failed.%f%b"
 fi
 
-
 source "$HOME/.zinit/bin/zinit.zsh"
 autoload -Uz _zinit
 (( ${+_comps} )) && _comps[zinit]=_zinit
-
 
 #################################################################
 # FUNCTIONS TO MAKE CONFIGURATION LESS VERBOSE
@@ -70,13 +66,11 @@ zinit light-mode for \
 
 ### End of Zinit's installer chunk
 
-
 # Autosuggestions
 turbo0 \
     atload'_zsh_autosuggest_start'\
     atload'ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=59"'
 zlight zsh-users/zsh-autosuggestions
-
 
 # Completions
 turbo0; zlight Valodim/zsh-curl-completion
@@ -94,25 +88,29 @@ zinit light zsh-users/zsh-completions
 zinit ice wait lucid as"completion" blockf
 zinit snippet https://github.com/docker/cli/blob/master/contrib/completion/zsh/_docker
 
-turbo0; zsnippet .zshrc.d/completion-options.zsh
+zinit ice wait lucid as"completion" blockf
+zinit snippet https://github.com/git/git/blob/master/contrib/completion/git-completion.zsh
+
+turbo0; zsnippet .config/zsh/completion-options.zsh
 
 source "/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc"
 
 turbo1 as'completion'; zsnippet OMZ::plugins/terraform/_terraform
 
-
 # All things Z
-export FZF_DEFAULT_COMMAND="fd . $HOME"
+export FZF_DEFAULT_COMMAND="fd --no-ignore-vcs --exclude node_modules --exclude .git . /"
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
-export FZF_ALT_C_COMMAND="fd -t d . $HOME"
+export FZF_ALT_C_COMMAND="fd -t d --no-ignore-vcs --exclude node_modules --exclude .git . $HOME"
 turbo0; zsnippet "/usr/local/opt/fzf/shell/key-bindings.zsh"
+turbo0; zsnippet "/usr/local/opt/fzf/shell/completion.zsh"
 
 turbo0; zlight rupa/z
 
-turbo1 pick'fz.sh' \
+turbo0 pick'fz.sh' \
 atload'ZSH_AUTOSUGGEST_CLEAR_WIDGETS+=(autopair-insert __fz_zsh_completion)'
 zlight changyuheng/fz
 
+turbo0; zlight Aloxaf/fzf-tab
 # History
 turbo0; zlight zdharma/history-search-multi-word
 
@@ -123,18 +121,13 @@ zlight zsh-users/zsh-history-substring-search
 # aliases stuff
 turbo1; zlight brymck/print-alias
 
-# turbo1 from'gh-r' as'program'
-# zlight sei40kr/fast-alias-tips-bin
-# turbo1 atload'FAST_ALIAS_TIPS_PREFIX="$(tput setaf 4)use alias: $(tput bold)$(tput setaf 7)"'
-# zlight sei40kr/zsh-fast-alias-tips
-
 turbo1 \
   atload'export YSU_MESSAGE_FORMAT="$(tput setaf 4)Found %alias_type alias for \`%command\`: $(tput setaf 6)$(tput bold)%alias$(tput sgr0)"';
 zlight MichaelAquilina/zsh-you-should-use
 
 turbo1; zlight webyneter/docker-aliases
 
-turbo0 atload'source $HOME/.zshrc.d/abbrev-aliases.zsh';
+turbo0 atload'source $HOME/.config/zsh/abbrev-aliases.zsh';
 zlight momo-lab/zsh-abbrev-alias
 
 # Manydots
@@ -161,18 +154,14 @@ turbo2 from'gitlab' \
   atload'export PATH="$PATH:$GOPATH/bin"'
 zlight "RiverGlide/zsh-goenv"
 
-
 # Syntax highlighting
 turbo1  atload'FAST_HIGHLIGHT[chroma-man]=' \
   atload"ZINIT[COMPINIT_OPTS]='-i' zicompinit; zicdreplay" \
   atload"_comp_options+=(globdots)"
 zinit light zdharma/fast-syntax-highlighting
 
-
 zlight pikariop/oblique-strategies-zsh
 
-
-export STARSHIP_CONFIG=~/.starship
 eval "$(starship init zsh)"
 
 print_oblique
