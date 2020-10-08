@@ -12,3 +12,5 @@ dotfiles/.config/nvim/autoload
 dotfiles/.config/nvim/plugged
 dotfiles/.config/nvim/session
 dotfiles/.config/nvim/.netrwhist
+dotfiles/.config/zsh/.zsh_history
+dotfiles/.config/zsh/.zcompdump
