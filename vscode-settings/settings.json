@@ -31,6 +31,7 @@
       "source.organizeImports": true
     }
   },
+  "go.useCodeSnippetsOnFunctionSuggest": true,
   "go.coverageDecorator": {
     "type": "gutter",
     "coveredHighlightColor": "rgba(64,128,128,0.5)",
@@ -512,7 +513,7 @@
   "editor.fontFamily": "Fira Code",
   "editor.fontLigatures": true,
   "editor.fontSize": 13,
-  "workbench.colorTheme": "Andromeda Colorizer",
+  "workbench.colorTheme": "Eva Dark",
   "vim.camelCaseMotion.enable": true,
   "editor.minimap.enabled": false,
   "todo-tree.showInExplorer": false,
@@ -573,8 +574,7 @@
     "exclude": [".terraform/**/*", "**/.terraform/**/*"]
   },
   "terraform.languageServer": {
-    "enabled": true,
-    "args": []
+    "external": true
   },
   "yaml.schemas": {
     "/Users/henrik.rudstrom/Dev/amedia/thewho/static/schema/whoami.v1.schema.json": "whoami.yaml"
@@ -605,5 +605,23 @@
   "[Log]": {
     "editor.wordWrap": "on"
   },
-  "terminal.integrated.macOptionClickForcesSelection": true
+  "terminal.integrated.macOptionClickForcesSelection": true,
+  "workbench.editor.revealIfOpen": true,
+  "workbench.editor.labelFormat": "short",
+  "workbench.editor.limit.enabled": true,
+  "workbench.editor.showIcons": false,
+  "workbench.editor.tabSizing": "shrink",
+  "workbench.editor.openPositioning": "left",
+  "workbench.editor.enablePreview": false,
+  "workbench.editor.enablePreviewFromQuickOpen": false,
+  "workbench.editor.limit.perEditorGroup": true,
+  "editor.tokenColorCustomizations": {
+    "editorWarning.foreground": "#321",
+    "editorInfo.foreground": "#321"
+  },
+  "go.lintTool": "golangci-lint",
+  "go.lintFlags": [
+    "--exclude-use-default"
+  ],
+  "editor.suggest.snippetsPreventQuickSuggestions": false
 }
