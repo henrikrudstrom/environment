@@ -103,7 +103,7 @@ turbo1 as'completion'; zsnippet OMZ::plugins/terraform/_terraform
 # export FZF_ALT_C_COMMAND="fd -t d --no-ignore-vcs --exclude node_modules --exclude .git . $HOME"
 # turbo0; zsnippet "/usr/local/opt/fzf/shell/key-bindings.zsh"
 # turbo0; zsnippet "/usr/local/opt/fzf/shell/completion.zsh"
-source "$HOME/.config/zsh/more-fzf.zsh"
+turbo0; zsnippet "$HOME/.config/zsh/more-fzf.zsh"
 turbo0; zlight rupa/z
 
 turbo0 pick'fz.sh' \
