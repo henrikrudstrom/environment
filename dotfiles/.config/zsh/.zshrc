@@ -98,12 +98,12 @@ source "/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.
 turbo1 as'completion'; zsnippet OMZ::plugins/terraform/_terraform
 
 # All things Z
-export FZF_DEFAULT_COMMAND="fd --no-ignore-vcs --exclude node_modules --exclude .git . /"
-export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
-export FZF_ALT_C_COMMAND="fd -t d --no-ignore-vcs --exclude node_modules --exclude .git . $HOME"
-turbo0; zsnippet "/usr/local/opt/fzf/shell/key-bindings.zsh"
-turbo0; zsnippet "/usr/local/opt/fzf/shell/completion.zsh"
-
+# export FZF_DEFAULT_COMMAND="fd --no-ignore-vcs --exclude node_modules --exclude .git . $HOME"
+# export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+# export FZF_ALT_C_COMMAND="fd -t d --no-ignore-vcs --exclude node_modules --exclude .git . $HOME"
+# turbo0; zsnippet "/usr/local/opt/fzf/shell/key-bindings.zsh"
+# turbo0; zsnippet "/usr/local/opt/fzf/shell/completion.zsh"
+source "$HOME/.config/zsh/more-fzf.zsh"
 turbo0; zlight rupa/z
 
 turbo0 pick'fz.sh' \
