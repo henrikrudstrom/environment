@@ -623,5 +623,6 @@
   "go.lintFlags": [
     "--exclude-use-default"
   ],
-  "editor.suggest.snippetsPreventQuickSuggestions": false
+  "editor.suggest.snippetsPreventQuickSuggestions": false,
+  "tabnine.experimentalAutoImports": true
 }
