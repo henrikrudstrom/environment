@@ -1,17 +1,17 @@
 local meh = {"ctrl", "alt", "shift"}
 local hyper = {"shift", "ctrl", "alt", "cmd"}
 
-local n1 = "7"
-local n2 = "8"
-local n3 = "9"
-local n4 = "f17"
-local n5 = "f18"
-local n6 = "f19"
-local n7 = "f7"
-local n8 = "f8"
-local n9 = "f9"
-local n0 = "f20"
-local np = "f16"
+local n1 = "1"
+local n2 = "2"
+local n3 = "3"
+local n4 = "4"
+local n5 = "5"
+local n6 = "6"
+local n7 = "7"
+local n8 = "8"
+local n9 = "9"
+local n0 = "0"
+local np = ","
 local duration = 0.03
 
 function left(div)

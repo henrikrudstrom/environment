@@ -135,9 +135,12 @@ _kube_tmux_alias_context() {
   cluster="${parts[3]}"
 
   clusterDB="${HOME}/.config/clusters.yaml"
-  data=$(yq -j r $clusterDB | jq -c)
+  data=$(yq "." $clusterDB | jq -c)
 
   KUBE_TMUX_ALIAS=$(echo $data | jq -r ".clusters | with_entries(select(.value.project == \"$project\" and .value.region == \"$region\" and .value.cluster.name == \"$cluster\")) | keys[0]")
+  if [ "$KUBE_TMUX_ALIAS" == "null" ]; then
+    KUBE_TMUX_ALIAS=$KUBE_TMUX_CONTEXT
+  fi
 }
 
 kube_tmux() {

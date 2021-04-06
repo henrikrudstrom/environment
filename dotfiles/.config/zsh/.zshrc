@@ -25,6 +25,10 @@ export EDITOR=vim
 
 source $HOME/.config/zsh/aliases.zsh
 export TIGRC_USER=$HOME/.config/tigrc
+
+export PATH="/usr/local/opt/openjdk@8/bin:$PATH"
+export JAVA_OPTS="-Xmx512m"
+export MAVEN_OPTS="-Xms256m -Dfile.encoding=UTF-8 -Dcom.sun.management.jmxremote -noverify $JAVA_OPTS"
 # VI mode
 # bindkey -v
 # export KEYTIMEOUT=1
@@ -117,9 +121,6 @@ turbo0; zlight zdharma/history-search-multi-word
 export HISTORY_SUBSTRING_SEARCH_HIGHLIGHT_FOUND="fg=blue,bold,underline"
 turbo0 atload'bindkey "^[[A" history-substring-search-up; bindkey "^[[B" history-substring-search-down'
 zlight zsh-users/zsh-history-substring-search
-
-# aliases stuff
-turbo1; zlight brymck/print-alias
 
 turbo1 \
   atload'export YSU_MESSAGE_FORMAT="$(tput setaf 4)Found %alias_type alias for \`%command\`: $(tput setaf 6)$(tput bold)%alias$(tput sgr0)"';

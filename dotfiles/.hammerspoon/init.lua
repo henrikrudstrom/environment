@@ -11,7 +11,7 @@ local hyper = {"shift", "ctrl", "alt", "cmd"}
 print("loading here")
 hs.hotkey.bind(hyper, "f1", "hammerspoon reloaded", nil, hs.reload)
 hs.hotkey.bind(hyper, "f2", nil, nil, hs.toggleConsole)
-hs.hotkey.bind(hyper, "5", function()
+hs.hotkey.bind(hyper, "f15", function()
   local screen  = hs.screen.primaryScreen()
   local normalMode = "3440x1440@1x"
   local scaledMode = "2048x858@1x"

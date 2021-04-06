@@ -61,3 +61,5 @@ alias gco='git checkout'
 alias top='htop'
 alias vi="nvim"
 alias vim="nvim"
+
+alias mk="minikube kubectl --"

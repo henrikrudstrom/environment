@@ -1,7 +1,7 @@
 clusterDB="${HOME}/.config/clusters.yaml"
 
 clusterKey=$1
-data=$(yq -j r $clusterDB clusters | jq -c)
+data=$(yq ".clusters" $clusterDB | jq -c)
 match=$(
     echo $data |
         jq --arg clusterKey "$clusterKey" 'keys | .[] | select(. == $clusterKey) | 1'

@@ -20,3 +20,6 @@ npm install -g thrash-cli
 
 echo "Installing rust packages"
 cargo install tealdeer
+
+echo "Installing python packages"
+pip3 install yq

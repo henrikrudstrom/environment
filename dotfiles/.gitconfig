@@ -2,7 +2,7 @@
 name = Henrik Rudstrøm
 email = henrik.rudstrom@amedia.no
 [url "ssh://git@github.com/"]
-	insteadOf = https://github.com/
+insteadOf = https://github.com/
 [core]
 pager = diff-so-fancy | less --tabs=4 -RFX
 ignorecase = false
@@ -85,6 +85,6 @@ up = "!f() { git checkout ${1-master} && git pull --rebase && git checkout -; gi
 
 squash = "!f(){ git reset --soft HEAD~${1} && git commit --edit -m\"$(git log --format=%B --reverse HEAD..HEAD@{1})\"; };f"
 
-movebranch = branch -f  
+movebranch = branch -f
 fixup = ci --fixup
-autosquash = rebase -i --autosquash 
+autosquash = rebase -i --autosquash
