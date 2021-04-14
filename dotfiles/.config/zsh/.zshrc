@@ -145,12 +145,7 @@ zinit light ael-code/zsh-colored-man-pages
 zinit ice trigger-load'!gencomp' pick'zsh-completion-generator.plugin.zsh' atload'zinit creinstall -q "$PWD"'
 zlight RobSis/zsh-completion-generator
 
-# nvm, gvm, rbenv
-turbo2; zlight lukechilds/zsh-nvm
-
-turbo2; zsnippet OMZ::plugins/rbenv/rbenv.plugin.zsh
-
-turbo2; zsnippet /Users/henrikrudstrom/.gvm/scripts/gvm
+turbo2; zsnippet OMZ::plugins/asdf/asdf.plugin.zsh
 
 # Syntax highlighting
 turbo1  atload'FAST_HIGHLIGHT[chroma-man]=' \
